@@ -9,6 +9,11 @@ Operator icons made in Illustrator, availiable in SVG, AI and PNG.
 
 All icons are made by hand and might have slight differences to the original ones, since Ubisoft doesn't supply the original files yet but they should be pretty close :)
 
+## Previews
+
+![ParaBellum](https://raw.githubusercontent.com/MarcoPixel/r6-operatoricons/master/Previews/OperationParaBellumIcons.png)
+![Chimera](https://raw.githubusercontent.com/MarcoPixel/r6-operatoricons/master/Previews/OperationChimeraIcons.png)
+
 ## Operators
 - Alibi
 - Maestro
