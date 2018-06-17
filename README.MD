@@ -16,6 +16,8 @@ All icons are made by hand and might have slight differences to the original one
 - Maestro
 - Finka
 - Lion
+- Dokkaebi
+- Vigil
 
 If you need the older operators, you can download them from [/u/DocYen](https://www.reddit.com/user/DocYen) on his Google Drive.
 
