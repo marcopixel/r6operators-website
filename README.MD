@@ -18,6 +18,8 @@ All icons are made by hand and might have slight differences to the original one
 - Lion
 - Dokkaebi
 - Vigil
+- Zofia
+- Ela
 
 If you need the older operators, you can download them from [/u/DocYen](https://www.reddit.com/user/DocYen) on his Google Drive.
 
