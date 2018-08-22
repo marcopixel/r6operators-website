@@ -12,6 +12,8 @@ All icons are made by hand and might have slight differences to the original one
 ## Preview: https://imgur.com/a/1vZ045p
 
 ## Operators
+- Clash
+- Maverick
 - Alibi
 - Maestro
 - Finka
@@ -22,6 +24,8 @@ All icons are made by hand and might have slight differences to the original one
 - Ela
 - Lesion
 - Ying
+- Mira
+- Jackal
 - Recruits
 
 If you need the older operators, you can download them from [/u/DocYen](https://www.reddit.com/user/DocYen) on his Google Drive.
