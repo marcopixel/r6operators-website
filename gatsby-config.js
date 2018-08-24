@@ -8,6 +8,7 @@ module.exports = {
         `gatsby-plugin-typescript`,
         "gatsby-plugin-resolve-src",
         "gatsby-plugin-svg-sprite",
+        "gatsby-plugin-react-helmet",
         {
             resolve: `gatsby-plugin-sass`,
             options: {
