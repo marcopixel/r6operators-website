@@ -5,3 +5,6 @@ body {
     background: $bg-color;
     font-family: $fontfamily;
 }
+button, input, optgroup, select, textarea {
+    font-family: $fontfamily;
+}

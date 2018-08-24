@@ -7,6 +7,7 @@ import "./IconGrid.scss";
 
 // import JSON
 import data from "icons.json";
+import Icon, { FEATHER } from "components/Icon";
 
 interface IIconGridState {
     inputValue: string;
@@ -101,11 +102,13 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
     render() {
         return (
             <div className="icongrid">
-                <div className="icongrid__searchbar">
-                    <input value={this.state.inputValue} onChange={this.updateInputValue} />
-                </div>
                 <div className="icongrid__filters">
+                    <div className="icongrid__search">
+                        <Icon glyph={FEATHER.SEARCH} />
+                        <input placeholder="Search icons" value={this.state.inputValue} onChange={this.updateInputValue} />
+                    </div>
                     <Dropdown
+                        className="icongrid__dropdown"
                         options={filters}
                         onChange={this.setFilter}
                         value={this.state.filter}
@@ -126,7 +129,9 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                             zipFile={withPrefix(`/zip/${x.id}.zip`)}
                         />
                     ))}
-                    {this.state.items.length === 0 ? <div className="icongrid__empty">No results found for "{this.state.inputValue}"</div> : null}
+                    {this.state.items.length === 0 ? (
+                        <div className="icongrid__empty">No results found for "{this.state.inputValue}"</div>
+                    ) : null}
                 </div>
             </div>
         );

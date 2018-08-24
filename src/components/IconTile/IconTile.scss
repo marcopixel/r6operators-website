@@ -1,29 +1,28 @@
 @import "~scss/variables";
 @import "~scss/mixins";
 @import "~scss/colors";
-
 $slideInOffset: -1.5rem;
 $tileGutterWidth: 2rem;
 
 .iconTile {
     position: relative;
     display: flex;
-    flex: 0 1 calc(33% - #{$tileGutterWidth});
     flex-direction: column;
     align-items: center;
+    width: calc(33.3333% - #{$tileGutterWidth});
     margin: 0.5rem;
-    padding: 0.5rem 0.5rem 2rem 0.5rem; 
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
     overflow: hidden;
     border-radius: $borderradius;
-    background: lighten($bg-color, 3%);
+    background: $tile-background;
 
     @include ease-in-out(box-shadow, 200ms);
 
     @include medium {
-        flex: 0 1 calc(25% - #{$tileGutterWidth});
+        width: calc(25% - #{$tileGutterWidth});
     }
     @include large {
-        flex: 0 1 calc(20% - #{$tileGutterWidth});
+        width: calc(20% - #{$tileGutterWidth});
     }
 
     &__content {
@@ -43,7 +42,7 @@ $tileGutterWidth: 2rem;
         opacity: 0;
         display: flex;
         flex-direction: row;
-        justify-content: center; 
+        justify-content: center;
 
         a {
             color: rgba($font-color-subtle, 0.5);
@@ -66,7 +65,7 @@ $tileGutterWidth: 2rem;
         padding-bottom: 0.35em;
 
         @include medium {
-            font-size: 1.2em;
+            font-size: 1.125em;
         }
     }
 

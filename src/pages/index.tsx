@@ -8,7 +8,6 @@ export default class IndexPage extends React.Component<any> {
     render() {
         return (
             <Layout>
-                <h1>Hello World!</h1>
                 <IconGrid />
             </Layout>
         );
