@@ -1,0 +1,97 @@
+{
+    "alibi": {
+        "displayName": "Alibi",
+        "role": "Defender",
+        "unit": "GIS"
+    },
+    "clash": {
+        "displayName": "Clash",
+        "role": "Defender",
+        "unit": "GSUTR"
+    },
+    "dokkaebi": {
+        "displayName": "Dokkaebi",
+        "role": "Attacker",
+        "unit": "SMB"
+    },
+    "echo": {
+        "displayName": "Echo",
+        "role": "Defender",
+        "unit": "SAT"
+    },
+    "ela": {
+        "displayName": "Ela",
+        "role": "Defender",
+        "unit": "GROM"
+    },
+    "finka": {
+        "displayName": "Finka",
+        "role": "Attacker",
+        "unit": "CBRN"
+    },
+    "hibana": {
+        "displayName": "Hibana",
+        "role": "Attacker",
+        "unit": "SAT"
+    },
+    "jackal": {
+        "displayName": "Jackal",
+        "role": "Attacker",
+        "unit": "GEO"
+    },
+    "lion": {
+        "displayName": "Lion",
+        "role": "Attacker",
+        "unit": "CBRN"
+    },
+    "maestro": {
+        "displayName": "Maestro",
+        "role": "Defender",
+        "unit": "GIS"
+    },
+    "maverick": {
+        "displayName": "Maverick",
+        "role": "Attacker",
+        "unit": "GSUTR"
+    },
+    "mira": {
+        "displayName": "Mira",
+        "role": "Defender",
+        "unit": "GEO"
+    },
+    "vigil": {
+        "displayName": "Vigil",
+        "role": "Defender",
+        "unit": "SMB"
+    },
+    "zofia": {
+        "displayName": "Zofia",
+        "role": "Attacker",
+        "unit": "GROM"
+    },
+    "recruit-blue": {
+        "displayName": "Recruit (Blue)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-green": {
+        "displayName": "Recruit (Green)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-orange": {
+        "displayName": "Recruit (Orange)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-red": {
+        "displayName": "Recruit (Red)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-yellow": {
+        "displayName": "Recruit (Yellow)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    }
+}

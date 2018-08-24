@@ -1,0 +1,23 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+
+.app {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+
+        @include medium {
+            max-width: $breakpoint-md;
+        }
+
+        @include large {
+            max-width: $breakpoint-lg;
+        }
+
+    }
+}
