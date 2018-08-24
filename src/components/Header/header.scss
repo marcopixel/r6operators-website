@@ -17,17 +17,21 @@
     margin: 0 0.5rem;
 
     &__logo {
-        width: 12rem;
+        width: 8rem;
         margin-top: 2.5rem;
 
-        svg {
-            fill: url(#logo-gradient);
+        @include medium {
+            width: 12rem;
         }
     }
     &__title {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 200;
         margin-bottom: 0.3em;
+
+        @include medium {
+            font-size: 3em;
+        }
     }
     &__subtitle {
         font-size: 1em;
@@ -41,7 +45,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+
+        @include medium {
+            margin-bottom: 2rem;
+        }
 
         .button {
             animation: gradientAnimation 15s linear infinite;
