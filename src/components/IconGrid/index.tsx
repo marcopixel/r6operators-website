@@ -48,7 +48,7 @@ const filters = [
     {
         type: "group",
         name: "Unit",
-        items: ["CBRN", "GIS", "GSUTR"]
+        items: ["GIGN", "SAS", "GSG9", "FBI", "SPETSNAZ", "JTF-2", "SEALS", "BOPE", "SAT", "GEO", "GROM", "SDU", "SMB", "CBRN", "GIS", "GSUTR"]
     }
 ];
 
@@ -130,7 +130,7 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                         />
                     ))}
                     {this.state.items.length === 0 ? (
-                        <div className="icongrid__empty">No results found for "{this.state.inputValue}"</div>
+                        <div className="icongrid__empty">No results found for "{this.state.inputValue || this.state.filter}"</div>
                     ) : null}
                 </div>
             </div>
