@@ -8,3 +8,14 @@ body {
 button, input, optgroup, select, textarea {
     font-family: $fontfamily;
 }
+
+a {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 600;
+    @include ease-in-out(all, 200ms);
+
+    @include hover-focus-active {
+        color: lighten($primary, 10%)
+    }
+}

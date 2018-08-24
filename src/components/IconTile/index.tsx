@@ -27,10 +27,10 @@ export default class IconTile extends React.Component<IIconTileProps, any> {
                 <div className="iconTile__content">
                     <div className="iconTile__name">{this.props.displayName}</div>
                     <div className="iconTile__postcontent">
-                        <a href={this.props.svgFile} download>SVG</a>
-                        <a href={this.props.pngFile} download>PNG</a>
-                        <a href={this.props.aiFile} download>AI</a>
-                        <a href={this.props.zipFile} download>ZIP</a>
+                        <a href={this.props.svgFile} title={`Download ${this.props.displayName}.svg`} download>SVG</a>
+                        <a href={this.props.pngFile} title={`Download ${this.props.displayName}.png`} download>PNG</a>
+                        <a href={this.props.aiFile} title={`Download ${this.props.displayName}.ai`} download>AI</a>
+                        <a href={this.props.zipFile} title={`Download ${this.props.displayName}.zip`} download>ZIP</a>
                     </div>
                 </div>
             </div>

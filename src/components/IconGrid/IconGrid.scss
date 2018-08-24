@@ -31,6 +31,7 @@
         margin-bottom: 0.5rem;
         position: relative;
         overflow: hidden;
+        @include ease-in-out(all, 200ms);
 
         input {
             background: transparent;
@@ -55,9 +56,20 @@
             margin-right: 1rem;
             margin-bottom: 0;
         }
+
+        @include hover-focus-active {
+            border-color: rgba($font-color-white, 0.2);
+        }
     }
     &__dropdown {
         flex: 1 0 100%;
+
+        .Dropdown-control {
+            @include hover-focus-active {
+                border-color: rgba($font-color-white, 0.2);
+            }
+        }
+
 
         @include medium {
             flex: 1 0 25%;
