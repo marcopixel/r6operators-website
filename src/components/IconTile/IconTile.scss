@@ -9,7 +9,7 @@ $tileGutterWidth: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(33.3333% - #{$tileGutterWidth});
+    width: calc(50% - #{$tileGutterWidth});
     margin: 0.5rem;
     padding: 0.5rem 0.5rem 2rem 0.5rem;
     overflow: hidden;
@@ -49,17 +49,21 @@ $tileGutterWidth: 2rem;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9em;
-            margin: 0 0.5em;
+            margin: 0 0.2em;
             @include ease-in-out(color, 200ms);
 
             @include hover-focus-active {
                 color: $primary;
             }
+
+            @include medium {
+                margin: 0 0.5em,
+            }
         }
     }
 
     &__name {
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: 600;
         line-height: 1.5;
         padding-bottom: 0.35em;

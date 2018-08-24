@@ -3,24 +3,34 @@
 @import "~scss/mixins";
 
 .icongrid {
+    margin: 1rem 0;
     &__container {
         display: flex;
         flex-wrap: wrap;
     }
     &__filters {
         display: flex;
+        flex-direction: column;
         padding: 0.5rem;
+
+        @include medium {
+            flex-direction: row;
+        }
     }
     &__search {
         display: flex;
         flex-direction: row;
         align-items: center;
-        flex: 1 1 60%;
+        flex: 1 0 100%;
         background-color: $tile-background;
         border: 1px solid lighten($tile-background, 4%);
         border-radius: $borderradius;
-        margin-right: 1rem;
+        padding-top: 0.75rem;
+        padding-right: 1rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
         position: relative;
+        overflow: hidden;
 
         input {
             background: transparent;
@@ -28,19 +38,26 @@
             border: none;
             position: absolute;
             height: 100%;
-            width: 100%;
+            width: calc(100% - 3.25rem);
             left: 0;
-            padding-left: 3.25em;
+            line-height: 1em;
+            padding-left: 3.25rem;
             color: $font-color-white;
         }
 
         .icon {
             width: 1.25em;
-            padding-left: 1em;
+            padding-left: 1rem;
+        }
+
+        @include medium {
+            flex: 1 1 75%;
+            margin-right: 1rem;
+            margin-bottom: 0;
         }
     }
     &__dropdown {
-        flex: 1 0 40%;
+        flex: 1 0 100%;
 
         @include medium {
             flex: 1 0 25%;
