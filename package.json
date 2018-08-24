@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
