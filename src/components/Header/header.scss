@@ -1,3 +1,56 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+@import "~scss/colors";
+
+#logo_logo-gradient {
+    --color-stop-1: #{$gradient-step-1};
+    --color-stop-2: #{$gradient-step-2};
+    --color-stop-3: #{$gradient-step-3};
+    --color-stop-4: #{$gradient-step-4};
+}
+
 .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 0.5rem;
+
+    &__logo {
+        width: 12rem;
+        margin-top: 2.5rem;
+
+        svg {
+            fill: url(#logo-gradient);
+        }
+    }
+    &__title {
+        font-size: 3em;
+        font-weight: 200;
+        margin-bottom: 0.3em;
+    }
+    &__subtitle {
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        color: rgba($font-color-white, 0.5);
+    }
+
+    &__downloadAll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .button {
+            animation: gradientAnimation 15s linear infinite;
+        }
+
+        span {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: rgba($font-color-white, 0.75);
+        }
+    }
 }
