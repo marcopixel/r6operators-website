@@ -7,6 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public",
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
@@ -32,6 +33,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",

@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const browserslist = require('browserslist');
 
 module.exports = {
+  pathPrefix: "/r6-operatoricons",
   siteMetadata: {
     siteName: `Using Typescript Example`,
   },
