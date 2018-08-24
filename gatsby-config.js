@@ -4,9 +4,6 @@ const cssnano = require("cssnano");
 
 module.exports = {
     pathPrefix: "/r6-operatoricons",
-    siteMetadata: {
-        siteName: `Using Typescript Example`
-    },
     plugins: [
         `gatsby-plugin-typescript`,
         "gatsby-plugin-resolve-src",

@@ -18,8 +18,19 @@ declare module "*.json" {
     export default value;
 };
 declare module "react-dropdown" {
+    import * as React from "react";
+    export interface Option {
+      label: string;
+      value: string;
+      className?: string;
+    }
+    export interface Group {
+      type: "group";
+      name: string;
+      items: Option[];
+    }
     export interface ReactDropdownProps {
-      options: any;
+      options: (Group | Option | string | Array)[];
       baseClassName?: string;
       className?: string;
       controlClassName?: string;
@@ -32,5 +43,9 @@ declare module "react-dropdown" {
       value?: Option | string;
       placeholder?: String;
     }
-    export default ReactDropdownProps
+  
+    class ReactDropdown extends React.Component<ReactDropdownProps> {
+    }
+  
+    export default ReactDropdown;
   }
