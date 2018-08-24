@@ -18,10 +18,11 @@
 
     &__logo {
         width: 8rem;
-        margin-top: 2.5rem;
+        margin-top: 2.25rem;
 
         @include medium {
             width: 12rem;
+            margin-top: 2.5rem;
         }
     }
     &__title {
@@ -45,7 +46,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.8rem;
 
         @include medium {
             margin-bottom: 2rem;
