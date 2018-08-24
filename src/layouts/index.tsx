@@ -6,7 +6,7 @@ import "./layout.scss";
 import Header from "components/Header";
 import Footer from "components/Footer";
 
-const MainLayout: React.Component = ({ children }) => (
+const MainLayout: React.SFC = ({ children }) => (
     <div className="app">
         <Helmet>
             <meta charSet="utf-8" />

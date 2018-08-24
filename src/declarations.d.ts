@@ -17,4 +17,20 @@ declare module "*.json" {
     const value: any;
     export default value;
 };
-
+declare module "react-dropdown" {
+    export interface ReactDropdownProps {
+      options: any;
+      baseClassName?: string;
+      className?: string;
+      controlClassName?: string;
+      placeholderClassName?: string;
+      menuClassName?: string;
+      arrowClassName?: string;
+      disabled?: boolean;
+      onChange?: (arg: Option) => void;
+      onFocus?: (arg: boolean) => void;
+      value?: Option | string;
+      placeholder?: String;
+    }
+    export default ReactDropdownProps
+  }
