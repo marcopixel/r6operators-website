@@ -71,10 +71,14 @@
         }
 
         li {
-            flex: 0 0 50%;
+            flex: 1 0 100%;
             list-style-type: none;
             padding: 0.25em 0;
             color: rgba($font-color-white, 0.5);
+
+            @include large {
+                flex: 0 0 50%;
+            }
         }
     }
 }
