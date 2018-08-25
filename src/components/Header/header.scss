@@ -54,6 +54,12 @@
 
         .button {
             animation: gradientAnimation 15s linear infinite;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            
+            @include hover-focus-active {
+                transform: scale(1.1)
+            }
         }
 
         span {
