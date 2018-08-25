@@ -1,0 +1,112 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+@import "~scss/colors";
+
+.info {
+    display: flex;
+    margin: 2em 0.5em;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    border-top: 1px solid rgba($font-color-white, 0.05);
+    justify-content: space-between;
+
+    @include medium {
+        padding: 2rem 2rem;
+        flex-direction: row;
+    }
+
+    &__divider {
+        display: none;
+        width: 1px;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 1.5rem;
+        background: rgba($font-color-white, 0.05);
+
+        @include medium {
+            display: flex;
+        }
+    }
+    &__title {
+        font-size: 2em;
+        font-weight: 300;
+        color: $font-color-white;
+        text-align: center;
+        margin: 1.5rem 0;
+        animation: gradientAnimation 15s linear infinite;
+
+        @include medium {
+            text-align: left;
+        }
+    }
+}
+.oplist {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &__overview {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        display: flex;
+        width: 45%;
+        flex-direction: column;
+        opacity: 0.7;
+
+        span {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: left;
+            padding: 1em 0;
+            border-bottom: 1px solid rgba($font-color-white, 0.05);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+
+        li {
+            flex: 0 0 50%;
+            list-style-type: none;
+            padding: 0.25em 0;
+            color: rgba($font-color-white, 0.5);
+        }
+    }
+}
+.contribute {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include medium {
+            text-align: left;
+        }
+
+        a {
+            margin: 0.25em 0;
+        }
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.4;
+        color: rgba($font-color-white, 0.5);
+    }
+    a {
+        color: rgba($font-color-white, 0.7);
+
+        @include hover-focus-active {
+            color: $font-color-white;
+        }
+    }
+}

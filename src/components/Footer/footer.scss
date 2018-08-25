@@ -9,7 +9,7 @@
     text-align: center;
     margin: 3rem 0.5rem 0 0.5rem;
     padding: 3rem 1rem;
-    color: rgba($font-color-white, 0.3);
+    color: rgba($font-color-white, 0.5);
     border-top: 1px solid rgba($font-color-white, 0.05);
 
     @include medium {
@@ -17,7 +17,7 @@
     }
 
     a {
-        color: rgba($font-color-white, 0.5);
+        color: rgba($font-color-white, 0.7);
 
         @include hover-focus-active {
             color: rgba($font-color-white, 0.9);
