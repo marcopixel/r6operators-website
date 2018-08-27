@@ -39,6 +39,11 @@
         "role": "Attacker",
         "unit": "GEO"
     },
+    "lesion": {
+        "displayName": "Lesion",
+        "role": "Defender",
+        "unit": "SDU"
+    },
     "lion": {
         "displayName": "Lion",
         "role": "Attacker",
@@ -63,6 +68,11 @@
         "displayName": "Vigil",
         "role": "Defender",
         "unit": "SMB"
+    },
+    "ying": {
+        "displayName": "Ying",
+        "role": "Attacker",
+        "unit": "SDU"
     },
     "zofia": {
         "displayName": "Zofia",
