@@ -4,6 +4,16 @@
         "role": "Defender",
         "unit": "GIS"
     },
+    "caveira": {
+        "displayName": "Caveira",
+        "role": "Defender",
+        "unit": "BOPE"
+    },
+    "capitao": {
+        "displayName": "Capitao",
+        "role": "Attacker",
+        "unit": "BOPE"
+    },
     "clash": {
         "displayName": "Clash",
         "role": "Defender",

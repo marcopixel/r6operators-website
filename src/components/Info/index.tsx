@@ -16,7 +16,7 @@ export default class Info extends React.Component<any> {
                                 <li>Blackbeard</li>
                                 <li>Blitz</li>
                                 <li>Buck</li>
-                                <li>Capitao</li>
+                                <li><s>Capitao</s></li>
                                 <li>Fuze</li>
                                 <li>Glaz</li>
                                 <li>IQ</li>
@@ -32,7 +32,7 @@ export default class Info extends React.Component<any> {
                             <ul>
                                 <li>Bandit</li>
                                 <li>Castle</li>
-                                <li>Caviera</li>
+                                <li><s>Caviera</s></li>
                                 <li>Doc</li>
                                 <li>Frost</li>
                                 <li>Jäger</li>
