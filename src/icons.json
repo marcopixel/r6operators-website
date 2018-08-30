@@ -4,6 +4,11 @@
         "role": "Defender",
         "unit": "GIS"
     },
+    "blackbeard": {
+        "displayName": "Blackbeard",
+        "role": "Attacker",
+        "unit": "SEALS"
+    },
     "caveira": {
         "displayName": "Caveira",
         "role": "Defender",
@@ -73,6 +78,11 @@
         "displayName": "Mira",
         "role": "Defender",
         "unit": "GEO"
+    },
+    "valkyrie": {
+        "displayName": "Valkyrie",
+        "role": "Defender",
+        "unit": "SEALS"
     },
     "vigil": {
         "displayName": "Vigil",

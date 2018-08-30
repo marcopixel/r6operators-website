@@ -13,7 +13,7 @@ export default class Info extends React.Component<any> {
                             <span>Attacker</span>
                             <ul>
                                 <li>Ash</li>
-                                <li>Blackbeard</li>
+                                <li><s>Blackbeard</s></li>
                                 <li>Blitz</li>
                                 <li>Buck</li>
                                 <li><s>Capitao</s></li>
@@ -42,7 +42,7 @@ export default class Info extends React.Component<any> {
                                 <li>Rook</li>
                                 <li>Smoke</li>
                                 <li>Tachanka</li>
-                                <li>Valkyrie</li>
+                                <li><s>Valkyrie</s></li>
                             </ul>
                         </div>
                     </div>
