@@ -4,6 +4,11 @@
         "role": "Defender",
         "unit": "GIS"
     },
+    "ash": {
+        "displayName": "Ash",
+        "role": "Attacker",
+        "unit": "FBI"
+    },
     "blackbeard": {
         "displayName": "Blackbeard",
         "role": "Attacker",
@@ -88,6 +93,11 @@
         "displayName": "Mira",
         "role": "Defender",
         "unit": "GEO"
+    },
+    "thermite": {
+        "displayName": "Thermite",
+        "role": "Attacker",
+        "unit": "FBI"
     },
     "valkyrie": {
         "displayName": "Valkyrie",
