@@ -22,7 +22,7 @@ export default class Info extends React.Component<any> {
                                 <li>IQ</li>
                                 <li>Montagne</li>
                                 <li>Sledge</li>
-                                <li>Thatcher</li>
+                                <li><s>Thatcher</s></li>
                                 <li><s>Thermite</s></li>
                                 <li>Twitch</li>
                             </ul>
