@@ -27,9 +27,9 @@ After you're finished with your icon, export the file as **SVG** (screenshot of 
   
 Here's an example on how it should look at the end:  
 - `/static/assets/ai/operatorname.ai`
-- `/static/assets/ai/operatorname.png`
-- `/static/assets/ai/operatorname.svg`
-- `/static/assets/ai/operatorname.zip` 
+- `/static/assets/png/operatorname.png`
+- `/static/assets/svg/operatorname.svg`
+- `/static/assets/zip/operatorname.zip` 
   
 Now commit all changes to your fork and then you can create the pull request on Github.
   
