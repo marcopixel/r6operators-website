@@ -99,6 +99,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "rook": {
+        "displayName": "Rook",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
     "thatcher": {
         "displayName": "Thatcher",
         "role": "Attacker",
