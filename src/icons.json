@@ -94,6 +94,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "thatcher": {
+        "displayName": "Thatcher",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
     "thermite": {
         "displayName": "Thermite",
         "role": "Attacker",
