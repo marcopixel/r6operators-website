@@ -9,6 +9,11 @@
         "role": "Attacker",
         "unit": "SEALS"
     },
+    "buck": {
+        "displayName": "Buck",
+        "role": "Attacker",
+        "unit": "JTF-2"
+    },
     "caveira": {
         "displayName": "Caveira",
         "role": "Defender",
@@ -43,6 +48,11 @@
         "displayName": "Finka",
         "role": "Attacker",
         "unit": "CBRN"
+    },
+    "frost": {
+        "displayName": "Frost",
+        "role": "Defender",
+        "unit": "JTF-2"
     },
     "hibana": {
         "displayName": "Hibana",
