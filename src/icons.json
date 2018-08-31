@@ -34,6 +34,11 @@
         "role": "Defender",
         "unit": "GSUTR"
     },
+    "doc": {
+        "displayName": "Doc",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
     "dokkaebi": {
         "displayName": "Dokkaebi",
         "role": "Attacker",

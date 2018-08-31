@@ -33,7 +33,7 @@ export default class Info extends React.Component<any> {
                                 <li>Bandit</li>
                                 <li>Castle</li>
                                 <li><s>Caviera</s></li>
-                                <li>Doc</li>
+                                <li><s>Doc</s></li>
                                 <li><s>Frost</s></li>
                                 <li>Jäger</li>
                                 <li>Kapkan</li>
