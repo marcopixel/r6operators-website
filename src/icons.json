@@ -4,10 +4,20 @@
         "role": "Defender",
         "unit": "GIS"
     },
+    "ash": {
+        "displayName": "Ash",
+        "role": "Attacker",
+        "unit": "FBI"
+    },
     "blackbeard": {
         "displayName": "Blackbeard",
         "role": "Attacker",
         "unit": "SEALS"
+    },
+    "buck": {
+        "displayName": "Buck",
+        "role": "Attacker",
+        "unit": "JTF-2"
     },
     "caveira": {
         "displayName": "Caveira",
@@ -49,6 +59,11 @@
         "role": "Attacker",
         "unit": "CBRN"
     },
+    "frost": {
+        "displayName": "Frost",
+        "role": "Defender",
+        "unit": "JTF-2"
+    },
     "hibana": {
         "displayName": "Hibana",
         "role": "Attacker",
@@ -83,6 +98,16 @@
         "displayName": "Mira",
         "role": "Defender",
         "unit": "GEO"
+    },
+    "thatcher": {
+        "displayName": "Thatcher",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
+    "thermite": {
+        "displayName": "Thermite",
+        "role": "Attacker",
+        "unit": "FBI"
     },
     "valkyrie": {
         "displayName": "Valkyrie",
