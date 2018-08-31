@@ -79,6 +79,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "thatcher": {
+        "displayName": "Thatcher",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
     "valkyrie": {
         "displayName": "Valkyrie",
         "role": "Defender",
