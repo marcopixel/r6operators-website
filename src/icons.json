@@ -114,6 +114,11 @@
         "role": "Attacker",
         "unit": "FBI"
     },
+    "twitch": {
+        "displayName": "Twitch",
+        "role": "Attacker",
+        "unit": "GIGN"
+    },
     "valkyrie": {
         "displayName": "Valkyrie",
         "role": "Defender",
