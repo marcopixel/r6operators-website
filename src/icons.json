@@ -104,6 +104,11 @@
         "role": "Defender",
         "unit": "GIGN"
     },
+    "sledge": {
+        "displayName": "Sledge",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
     "thatcher": {
         "displayName": "Thatcher",
         "role": "Attacker",
