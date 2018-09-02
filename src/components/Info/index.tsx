@@ -39,7 +39,7 @@ export default class Info extends React.Component<any> {
                                 <li>Kapkan</li>
                                 <li>Mute</li>
                                 <li>Pulse</li>
-                                <li>Rook</li>
+                                <li><s>Rook</s></li>
                                 <li>Smoke</li>
                                 <li>Tachanka</li>
                                 <li><s>Valkyrie</s></li>

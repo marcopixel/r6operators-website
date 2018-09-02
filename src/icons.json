@@ -99,6 +99,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "rook": {
+        "displayName": "Rook",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
     "thatcher": {
         "displayName": "Thatcher",
         "role": "Attacker",
@@ -108,6 +113,11 @@
         "displayName": "Thermite",
         "role": "Attacker",
         "unit": "FBI"
+    },
+    "twitch": {
+        "displayName": "Twitch",
+        "role": "Attacker",
+        "unit": "GIGN"
     },
     "valkyrie": {
         "displayName": "Valkyrie",
