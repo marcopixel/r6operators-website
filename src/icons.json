@@ -99,6 +99,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "pulse": {
+        "displayName": "Pulse",
+        "role": "Defender",
+        "unit": "FBI"
+    },
     "rook": {
         "displayName": "Rook",
         "role": "Defender",
