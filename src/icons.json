@@ -9,6 +9,11 @@
         "role": "Attacker",
         "unit": "FBI"
     },
+    "bandit": {
+        "displayName": "Bandit",
+        "role": "Defender",
+        "unit": "GSG9"
+    },
     "blackbeard": {
         "displayName": "Blackbeard",
         "role": "Attacker",
