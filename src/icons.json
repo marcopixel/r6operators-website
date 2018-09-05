@@ -74,6 +74,11 @@
         "role": "Attacker",
         "unit": "GEO"
     },
+    "kapkan": {
+        "displayName": "Kapkan",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
+    },
     "lesion": {
         "displayName": "Lesion",
         "role": "Defender",

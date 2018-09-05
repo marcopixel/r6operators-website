@@ -36,7 +36,7 @@ export default class Info extends React.Component<any> {
                                 <li><s>Doc</s></li>
                                 <li><s>Frost</s></li>
                                 <li>Jäger</li>
-                                <li>Kapkan</li>
+                                <li><s>Kapkan</s></li>
                                 <li>Mute</li>
                                 <li><s>Pulse</s></li>
                                 <li><s>Rook</s></li>
