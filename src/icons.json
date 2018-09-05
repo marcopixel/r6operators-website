@@ -74,6 +74,11 @@
         "role": "Attacker",
         "unit": "GEO"
     },
+    "kapkan": {
+        "displayName": "Kapkan",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
+    },
     "lesion": {
         "displayName": "Lesion",
         "role": "Defender",
@@ -99,6 +104,26 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "pulse": {
+        "displayName": "Pulse",
+        "role": "Defender",
+        "unit": "FBI"
+    },
+    "rook": {
+        "displayName": "Rook",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
+    "sledge": {
+        "displayName": "Sledge",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
+    "tachanka": {
+        "displayName": "Tachanka",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
+    },
     "thatcher": {
         "displayName": "Thatcher",
         "role": "Attacker",
@@ -108,6 +133,11 @@
         "displayName": "Thermite",
         "role": "Attacker",
         "unit": "FBI"
+    },
+    "twitch": {
+        "displayName": "Twitch",
+        "role": "Attacker",
+        "unit": "GIGN"
     },
     "valkyrie": {
         "displayName": "Valkyrie",
