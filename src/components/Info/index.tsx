@@ -30,7 +30,7 @@ export default class Info extends React.Component<any> {
                         <div className="oplist__list">
                             <span>Defender</span>
                             <ul>
-                                <li>Bandit</li>
+                                <li><s>Bandit</s></li>
                                 <li>Castle</li>
                                 <li><s>Caviera</s></li>
                                 <li><s>Doc</s></li>
