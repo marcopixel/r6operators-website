@@ -17,7 +17,7 @@ export default class Info extends React.Component<any> {
                                 <li>Blitz</li>
                                 <li><s>Buck</s></li>
                                 <li><s>Capitao</s></li>
-                                <li>Fuze</li>
+                                <li><s>Fuze</s></li>
                                 <li>Glaz</li>
                                 <li>IQ</li>
                                 <li>Montagne</li>

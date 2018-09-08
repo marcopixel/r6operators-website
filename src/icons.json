@@ -69,6 +69,11 @@
         "role": "Defender",
         "unit": "JTF-2"
     },
+    "fuze": {
+        "displayName": "Fuze",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
     "hibana": {
         "displayName": "Hibana",
         "role": "Attacker",
