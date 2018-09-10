@@ -74,6 +74,11 @@
         "role": "Attacker",
         "unit": "SPETSNAZ"
     },
+    "glaz": {
+        "displayName": "Glaz",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
     "hibana": {
         "displayName": "Hibana",
         "role": "Attacker",
