@@ -17,31 +17,31 @@ export default class Info extends React.Component<any> {
                                 <li>Blitz</li>
                                 <li><s>Buck</s></li>
                                 <li><s>Capitao</s></li>
-                                <li>Fuze</li>
+                                <li><s>Fuze</s></li>
                                 <li>Glaz</li>
                                 <li>IQ</li>
                                 <li>Montagne</li>
-                                <li>Sledge</li>
+                                <li><s>Sledge</s></li>
                                 <li><s>Thatcher</s></li>
                                 <li><s>Thermite</s></li>
-                                <li>Twitch</li>
+                                <li><s>Twitch</s></li>
                             </ul>
                         </div>
                         <div className="oplist__list">
                             <span>Defender</span>
                             <ul>
-                                <li>Bandit</li>
+                                <li><s>Bandit</s></li>
                                 <li>Castle</li>
                                 <li><s>Caviera</s></li>
                                 <li><s>Doc</s></li>
                                 <li><s>Frost</s></li>
                                 <li>Jäger</li>
-                                <li>Kapkan</li>
+                                <li><s>Kapkan</s></li>
                                 <li>Mute</li>
-                                <li>Pulse</li>
-                                <li>Rook</li>
+                                <li><s>Pulse</s></li>
+                                <li><s>Rook</s></li>
                                 <li>Smoke</li>
-                                <li>Tachanka</li>
+                                <li><s>Tachanka</s></li>
                                 <li><s>Valkyrie</s></li>
                             </ul>
                         </div>
