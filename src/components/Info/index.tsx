@@ -18,7 +18,7 @@ export default class Info extends React.Component<any> {
                                 <li><s>Buck</s></li>
                                 <li><s>Capitao</s></li>
                                 <li><s>Fuze</s></li>
-                                <li>Glaz</li>
+                                <li><s>Glaz</s></li>
                                 <li>IQ</li>
                                 <li>Montagne</li>
                                 <li><s>Sledge</s></li>
