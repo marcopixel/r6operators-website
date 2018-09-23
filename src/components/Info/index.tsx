@@ -19,7 +19,7 @@ export default class Info extends React.Component<any> {
                                 <li><s>Capitao</s></li>
                                 <li><s>Fuze</s></li>
                                 <li><s>Glaz</s></li>
-                                <li>IQ</li>
+                                <li><s>IQ</s></li>
                                 <li>Montagne</li>
                                 <li><s>Sledge</s></li>
                                 <li><s>Thatcher</s></li>
