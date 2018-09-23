@@ -20,7 +20,7 @@ export default class Info extends React.Component<any> {
                                 <li><s>Fuze</s></li>
                                 <li><s>Glaz</s></li>
                                 <li><s>IQ</s></li>
-                                <li>Montagne</li>
+                                <li><s>Montagne</s></li>
                                 <li><s>Sledge</s></li>
                                 <li><s>Thatcher</s></li>
                                 <li><s>Thermite</s></li>

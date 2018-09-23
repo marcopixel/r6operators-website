@@ -124,6 +124,11 @@
         "role": "Defender",
         "unit": "GEO"
     },
+    "montagne": {
+        "displayName": "Montagne",
+        "role": "Attacker",
+        "unit": "GIGN"
+    },
     "pulse": {
         "displayName": "Pulse",
         "role": "Defender",
