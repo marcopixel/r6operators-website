@@ -84,6 +84,11 @@
         "role": "Attacker",
         "unit": "SAT"
     },
+    "iq": {
+        "displayName": "IQ",
+        "role": "Attacker",
+        "unit": "GSG9"
+    },
     "jackal": {
         "displayName": "Jackal",
         "role": "Attacker",
