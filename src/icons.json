@@ -9,6 +9,11 @@
         "role": "Attacker",
         "unit": "FBI"
     },
+    "bandit": {
+        "displayName": "Bandit",
+        "role": "Defender",
+        "unit": "GSG9"
+    },
     "blackbeard": {
         "displayName": "Blackbeard",
         "role": "Attacker",
@@ -64,6 +69,16 @@
         "role": "Defender",
         "unit": "JTF-2"
     },
+    "fuze": {
+        "displayName": "Fuze",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
+    "glaz": {
+        "displayName": "Glaz",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
     "hibana": {
         "displayName": "Hibana",
         "role": "Attacker",
@@ -73,6 +88,11 @@
         "displayName": "Jackal",
         "role": "Attacker",
         "unit": "GEO"
+    },
+    "kapkan": {
+        "displayName": "Kapkan",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
     },
     "lesion": {
         "displayName": "Lesion",
