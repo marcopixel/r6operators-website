@@ -19,6 +19,11 @@
         "role": "Attacker",
         "unit": "SEALS"
     },
+    "blitz": {
+        "displayName": "Blitz",
+        "role": "Attacker",
+        "unit": "GSG9"
+    },
     "buck": {
         "displayName": "Buck",
         "role": "Attacker",
