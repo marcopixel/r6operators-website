@@ -19,6 +19,11 @@
         "role": "Attacker",
         "unit": "SEALS"
     },
+    "blitz": {
+        "displayName": "Blitz",
+        "role": "Attacker",
+        "unit": "GSG9"
+    },
     "buck": {
         "displayName": "Buck",
         "role": "Attacker",
@@ -93,6 +98,11 @@
         "displayName": "Jackal",
         "role": "Attacker",
         "unit": "GEO"
+    },
+    "jäger": {
+        "displayName": "Jäger",
+        "role": "Defender",
+        "unit": "GSG9"
     },
     "kapkan": {
         "displayName": "Kapkan",

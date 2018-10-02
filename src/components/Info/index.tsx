@@ -14,7 +14,7 @@ export default class Info extends React.Component<any> {
                             <ul>
                                 <li><s>Ash</s></li>
                                 <li><s>Blackbeard</s></li>
-                                <li>Blitz</li>
+                                <li><s>Blitz</s></li>
                                 <li><s>Buck</s></li>
                                 <li><s>Capitao</s></li>
                                 <li><s>Fuze</s></li>
@@ -35,7 +35,7 @@ export default class Info extends React.Component<any> {
                                 <li><s>Caviera</s></li>
                                 <li><s>Doc</s></li>
                                 <li><s>Frost</s></li>
-                                <li>Jäger</li>
+                                <li><s>Jäger</s></li>
                                 <li><s>Kapkan</s></li>
                                 <li>Mute</li>
                                 <li><s>Pulse</s></li>
