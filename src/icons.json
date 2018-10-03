@@ -29,14 +29,19 @@
         "role": "Attacker",
         "unit": "JTF-2"
     },
-    "caveira": {
-        "displayName": "Caveira",
-        "role": "Defender",
-        "unit": "BOPE"
-    },
     "capitao": {
         "displayName": "Capitao",
         "role": "Attacker",
+        "unit": "BOPE"
+    },
+    "castle": {
+        "displayName": "Castle",
+        "role": "Defender",
+        "unit": "FBI"
+    },
+    "caveira": {
+        "displayName": "Caveira",
+        "role": "Defender",
         "unit": "BOPE"
     },
     "clash": {
