@@ -154,6 +154,11 @@
         "role": "Attacker",
         "unit": "SAS"
     },
+    "smoke": {
+        "displayName": "Smoke",
+        "role": "Defender",
+        "unit": "SAS"
+    },
     "tachanka": {
         "displayName": "Tachanka",
         "role": "Defender",
