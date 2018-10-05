@@ -40,7 +40,7 @@ export default class Info extends React.Component<any> {
                                 <li>Mute</li>
                                 <li><s>Pulse</s></li>
                                 <li><s>Rook</s></li>
-                                <li>Smoke</li>
+                                <li><s>Smoke</s></li>
                                 <li><s>Tachanka</s></li>
                                 <li><s>Valkyrie</s></li>
                             </ul>
