@@ -31,7 +31,7 @@ export default class Info extends React.Component<any> {
                             <span>Defender</span>
                             <ul>
                                 <li><s>Bandit</s></li>
-                                <li>Castle</li>
+                                <li><s>Castle</s></li>
                                 <li><s>Caviera</s></li>
                                 <li><s>Doc</s></li>
                                 <li><s>Frost</s></li>
