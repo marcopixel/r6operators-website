@@ -144,6 +144,11 @@
         "role": "Attacker",
         "unit": "GIGN"
     },
+    "mute": {
+        "displayName": "Mute",
+        "role": "Defender",
+        "unit": "SAS"
+    },
     "pulse": {
         "displayName": "Pulse",
         "role": "Defender",
