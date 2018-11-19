@@ -48,7 +48,7 @@ const filters = [
     {
         type: "group",
         name: "Unit",
-        items: ["GIGN", "SAS", "GSG9", "FBI", "SPETSNAZ", "JTF-2", "SEALS", "BOPE", "SAT", "GEO", "GROM", "SDU", "SMB", "CBRN", "GIS", "GSUTR"]
+        items: ["GIGN", "SAS", "GSG9", "FBI", "SPETSNAZ", "JTF-2", "SEALS", "BOPE", "SAT", "GEO", "GROM", "SDU", "SMB", "CBRN", "GIS", "GSUTR", "GIGR"]
     }
 ];
 

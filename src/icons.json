@@ -109,6 +109,11 @@
         "role": "Defender",
         "unit": "GSG9"
     },
+    "kaid": {
+        "displayName": "Kaid",
+        "role": "Defender",
+        "unit": "GIGR"
+    },
     "kapkan": {
         "displayName": "Kapkan",
         "role": "Defender",
@@ -148,6 +153,11 @@
         "displayName": "Mute",
         "role": "Defender",
         "unit": "SAS"
+    },
+    "nomad": {
+        "displayName": "Nomad",
+        "role": "Attacker",
+        "unit": "GIGR"
     },
     "pulse": {
         "displayName": "Pulse",
