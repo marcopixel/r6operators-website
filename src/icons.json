@@ -89,6 +89,11 @@
         "role": "Attacker",
         "unit": "SPETSNAZ"
     },
+    "gridlock": {
+        "displayName": "Gridlock",
+        "role": "Attacker",
+        "unit": "SASR"
+    },
     "hibana": {
         "displayName": "Hibana",
         "role": "Attacker",
@@ -148,6 +153,11 @@
         "displayName": "Montagne",
         "role": "Attacker",
         "unit": "GIGN"
+    },
+    "mozzie": {
+        "displayName": "Mozzie",
+        "role": "Defender",
+        "unit": "SASR"
     },
     "mute": {
         "displayName": "Mute",
