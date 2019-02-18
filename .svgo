@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        { "removeViewBox": true },
+        { "convertTransform": false },
+        { "moveGroupAttrsToElems": true },
+        { "removeRasterImages": true }
+    ]
+}

@@ -24,7 +24,7 @@ interface IGLYPHMap {
 }
 
 // create GLYPHS object for svg sprite loader
-const reqIcons = require.context("../../../static/assets/svg", true, /\.svg$/);
+const reqIcons = require.context("../../../icons", true, /\.svg$/);
 const GLYPHS: IGLYPHMap = reqIcons.keys().reduce((glyphs, key) => {
     const filename = key.match(new RegExp(/[^/]+(?=\.svg$)/))![0];
     return { ...glyphs, [filename]: reqIcons(key).default };
