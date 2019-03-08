@@ -10,7 +10,8 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
-    "lint": "tslint --project ."
+    "lint": "tslint --project .",
+    "build:png": "node ./scripts/buildPNGs.js"
   },
   "dependencies": {
     "@types/node": "^10.12.0",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
+    "svg-to-png": "^4.0.0",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
