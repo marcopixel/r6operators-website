@@ -21,7 +21,7 @@ export default class Info extends React.Component<any> {
                     <div className="info__title">Links</div>
                     <div className="contribute__links">
                         <a href="https://github.com/MarcoPixel/r6-operatoricons">Github Repo</a>
-                        <a href="https://github.com/MarcoPixel/r6-operatoricons/blob/master/LICENSE.MD">License</a>
+                        <a href="https://creativecommons.org/licenses/by/4.0/">License</a>
                     </div>
                 </div>
             </div>
