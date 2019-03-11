@@ -3,7 +3,7 @@ const path = require("path");
 const chalk = require('chalk');
 const svg_to_png = require("svg-to-png");
 
-const srcPath = path.join(__dirname, `../icons/`);
+const srcPath = path.join(__dirname, `../static/icons/svg/`);
 const destPath = path.join(__dirname, `../static/icons/png/`);
 const config = { defaultHeight: "1400px", defaultWidth: "1400px" }
 

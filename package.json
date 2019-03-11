@@ -11,8 +11,8 @@
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
-    "build:png": "node ./scripts/buildPNGs.js",
-    "optimizeSVG": "svgo --folder ./icons --config ./.svgo"
+    "build:png": "node ./scripts/buildPNG.js",
+    "optimizeSVG": "svgo --folder ./static/icons/svg --config ./.svgo"
   },
   "dependencies": {
     "@types/node": "^10.12.0",
