@@ -12,6 +12,7 @@
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
     "build:png": "node ./scripts/buildPNG.js",
+    "build:zip": "node ./scripts/buildZIP.js",
     "optimizeSVG": "svgo --folder ./static/icons/svg --config ./.svgo"
   },
   "dependencies": {
@@ -38,6 +39,8 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "archiver": "^3.0.0",
+    "chalk": "^2.4.2",
     "gh-pages": "^2.0.1",
     "svg-to-png": "^4.0.0",
     "tslint": "^5.10.0",
