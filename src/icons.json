@@ -109,7 +109,7 @@
         "role": "Attacker",
         "unit": "GEO"
     },
-    "jäger": {
+    "jager": {
         "displayName": "Jäger",
         "role": "Defender",
         "unit": "GSG9"

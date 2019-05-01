@@ -24,7 +24,7 @@ interface IGLYPHMap {
 }
 
 // create GLYPHS object for svg sprite loader
-const reqIcons = require.context("../../../static/assets/svg", true, /\.svg$/);
+const reqIcons = require.context("../../../static/icons/svg", true, /\.svg$/);
 const GLYPHS: IGLYPHMap = reqIcons.keys().reduce((glyphs, key) => {
     const filename = key.match(new RegExp(/[^/]+(?=\.svg$)/))![0];
     return { ...glyphs, [filename]: reqIcons(key).default };
@@ -123,10 +123,10 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                             role={x.role}
                             unit={x.unit}
                             glyph={GLYPHS[x.id]}
-                            svgFile={withPrefix(`/assets/svg/${x.id}.svg`)}
-                            pngFile={withPrefix(`/assets/png/${x.id}.png`)}
-                            aiFile={withPrefix(`/assets/ai/${x.id}.ai`)}
-                            zipFile={withPrefix(`/assets/zip/${x.id}.zip`)}
+                            svgFile={withPrefix(`/icons/svg/${x.id}.svg`)}
+                            pngFile={withPrefix(`/icons/png/${x.id}.png`)}
+                            aiFile={withPrefix(`/icons/ai/${x.id}.ai`)}
+                            zipFile={withPrefix(`/icons/zip/${x.id}.zip`)}
                         />
                     ))}
                     {this.state.items.length === 0 ? (

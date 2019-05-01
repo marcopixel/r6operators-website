@@ -16,6 +16,16 @@ module.exports = {
                 postCssPlugins: [autoprefixer({ browsers: browserslist() }), cssnano({ preset: "default" })],
                 precision: 5
             }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: "UA-38249052-3",
+              anonymize: true,
+              head: true,
+              respectDNT: true,
+              cookieDomain: "marcopixel.eu",
+            }
         }
     ]
 };

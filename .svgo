@@ -1,0 +1,6 @@
+{
+    "plugins": [
+        { "removeViewBox": true },
+        { "removeRasterImages": false }
+    ]
+}
