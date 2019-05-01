@@ -58,7 +58,7 @@ function processPACKAGE(dest) {
 
     // then output for success
     package.then(res => {
-            console.log(`${chalk.green('success')} package finished!`)
+            console.log(`${chalk.green('success')} Package finished!`)
             console.log(`${chalk.green('success')} Output location: ${chalk.bold(dest)}${filename}`)
         },
             // output for failure

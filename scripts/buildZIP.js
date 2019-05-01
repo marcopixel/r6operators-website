@@ -63,13 +63,13 @@ async function processZIP(array, dest) {
                 // success
                 .then(res => {
                     outputCount++;
-                    console.log(`${chalk.blue('info')} ${chalk.bold(outputCount)}/${chalk.bold(inputCount)} - ${item} finished!`)
+                    console.log(`${chalk.blue('info')} ${chalk.bold(outputCount)}/${chalk.bold(inputCount)} - ${item}.zip finished!`)
                     resolve(item);
                 },
                     // error
                     rej => {
                         outputCount++;
-                        console.log(`${"\n"}${chalk.red('error')} ${chalk.bold(outputCount)}/${chalk.bold(inputCount)} - ${item} failed!`)
+                        console.log(`${"\n"}${chalk.red('error')} ${chalk.bold(outputCount)}/${chalk.bold(inputCount)} - ${item}.zip failed!`)
                         reject(rej.stack);
                     })
                 // catch any unwanted errors
