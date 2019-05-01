@@ -1,5 +1,6 @@
 import * as React from "react";
 import { withPrefix } from "gatsby-link";
+import { version } from '../../../package.json';
 
 import "./header.scss";
 import Icon, { ICON } from "components/Icon";
@@ -14,7 +15,7 @@ export default class Header extends React.Component<any> {
                 <div className="header__title">r6-operatoricons</div>
                 <div className="header__subtitle">Rainbow Six: Siege operator icons in SVG, PNG and AI.</div>
                 <div className="header__downloadAll">
-                    <a className="button secondary" href={withPrefix(`/assets/r6-operatoricons.zip`)}>
+                    <a className="button secondary" href={withPrefix(`/r6-operatoricons-${version}.zip`)}>
                         Download
                     </a>
                     <span>SVG, PNG and AI</span>

@@ -1,13 +1,14 @@
 {
   "name": "r6-operatoricons",
-  "version": "1.1.0",
+  "version": "1.1.0-Y4S1",
   "description": "Rainbow Six: Siege operator icons made in Illustrator, available in SVG, PNG and AI",
   "author": "marcopixel <marcopixel@live.de>",
   "license": "CC-BY-4.0",
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "run-s build:png build:zip build:package gh-deploy -n",
+    "gh-deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "run-s build:png build:zip build:package build:gatsby -n",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
