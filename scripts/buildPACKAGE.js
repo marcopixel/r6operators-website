@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const chalk = require('chalk');
 const archiver = require('archiver');
-const moment = require('moment');
 
 const config = require("./config.js");
 const testSource = require("./util/testSource.js");
@@ -47,7 +46,7 @@ function processPACKAGE(dest) {
 
     // add files to zip
     archive.file(path.join(__dirname,`./util/readme.txt`), { name: `readme.txt` });
-    archive.file(path.join(__dirname,`../LICENSE.MD`), { name: `license.txt` });
+    archive.file(path.join(__dirname,`../LICENSE.txt`), { name: `license.txt` });
     archive.directory(config.aiPath, 'Illustrator (AI)');
     archive.directory(config.pngPath, 'High-resolution PNG');
     archive.directory(config.svgPath, 'Scalable vector graphic (SVG)');

@@ -16,7 +16,7 @@
     "build:png": "node ./scripts/buildPNG.js",
     "build:zip": "node ./scripts/buildZIP.js",
     "build:package": "node ./scripts/buildPACKAGE.js",
-    "optimizeSVG": "svgo --folder ./static/icons/svg --config ./.svgo"
+    "optimizeSVG": "svgo --folder ./static/icons/svg --enable=removeViewBox --disable=removeRasterImages"
   },
   "dependencies": {
     "@types/node": "^11.13.8",
@@ -51,5 +51,11 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.4.5"
+  },
+  "prettier": {
+      "singleQuote": false,
+      "tabWidth": 4,
+      "useTabs": false,
+      "printWidth": 120
   }
 }
