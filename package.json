@@ -60,7 +60,7 @@
   },
   "analytics": {
     "gaTrackingID": "UA-38249052-3",
-    "debug": true,
+    "debug": false,
     "anonymizeIp": true
   }
 }
