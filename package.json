@@ -29,7 +29,6 @@
     "cssnano": "^4.1.10",
     "feather-icons": "^4.21.0",
     "gatsby": "2.3.34",
-    "gatsby-plugin-google-analytics": "^2.0.19",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-sass": "^2.0.11",
@@ -39,6 +38,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-dropdown": "^1.6.4",
+    "react-ga": "^2.5.7",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
@@ -53,9 +53,14 @@
     "typescript": "^3.4.5"
   },
   "prettier": {
-      "singleQuote": false,
-      "tabWidth": 4,
-      "useTabs": false,
-      "printWidth": 120
+    "singleQuote": false,
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 120
+  },
+  "analytics": {
+    "gaTrackingID": "UA-38249052-3",
+    "debug": true,
+    "anonymizeIp": true
   }
 }

@@ -2,6 +2,7 @@ import * as React from "react";
 import { withPrefix } from "gatsby-link";
 import Dropdown from "react-dropdown";
 import IconTile from "components/IconTile";
+import ReactGA from "react-ga";
 
 import "./IconGrid.scss";
 
@@ -48,7 +49,26 @@ const filters = [
     {
         type: "group",
         name: "Unit",
-        items: ["GIGN", "SAS", "GSG9", "FBI", "SPETSNAZ", "JTF-2", "SEALS", "BOPE", "SAT", "GEO", "GROM", "SASR", "SDU", "SMB", "CBRN", "GIS", "GSUTR", "GIGR"]
+        items: [
+            "GIGN",
+            "SAS",
+            "GSG9",
+            "FBI",
+            "SPETSNAZ",
+            "JTF-2",
+            "SEALS",
+            "BOPE",
+            "SAT",
+            "GEO",
+            "GROM",
+            "SASR",
+            "SDU",
+            "SMB",
+            "CBRN",
+            "GIS",
+            "GSUTR",
+            "GIGR"
+        ]
     }
 ];
 
@@ -81,6 +101,10 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
 
     setFilter(option) {
         if (option.value === "None") {
+            ReactGA.event({
+                category: `Filter`,
+                action: `Cleared filter`,
+            });
             // set empty state when "None" is selected
             this.setState({ inputValue: "", filter: option.value, items: initialItems });
         } else {
@@ -96,6 +120,11 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                         .toLowerCase()
                         .indexOf(option.value.toString().toLowerCase()) > -1
             );
+            ReactGA.event({
+                category: `Filter`,
+                action: `Changed filter`,
+                label: `${option.value}`
+            });
             this.setState({ inputValue: "", filter: option.value, items: updatedList });
         }
     }
@@ -105,7 +134,11 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                 <div className="icongrid__filters">
                     <div className="icongrid__search">
                         <Icon glyph={ICON.SEARCH} />
-                        <input placeholder="Search icons" value={this.state.inputValue} onChange={this.updateInputValue} />
+                        <input
+                            placeholder="Search icons"
+                            value={this.state.inputValue}
+                            onChange={this.updateInputValue}
+                        />
                     </div>
                     <Dropdown
                         className="icongrid__dropdown"
@@ -130,7 +163,9 @@ export default class IconGrid extends React.PureComponent<{}, IIconGridState> {
                         />
                     ))}
                     {this.state.items.length === 0 ? (
-                        <div className="icongrid__empty">No results found for "{this.state.inputValue || this.state.filter}"</div>
+                        <div className="icongrid__empty">
+                            No results found for "{this.state.inputValue || this.state.filter}"
+                        </div>
                     ) : null}
                 </div>
             </div>

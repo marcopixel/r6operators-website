@@ -18,6 +18,7 @@
 
     a {
         color: rgba($font-color-white, 0.7);
+        cursor: pointer;
 
         @include hover-focus-active {
             color: rgba($font-color-white, 0.9);
