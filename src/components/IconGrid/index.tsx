@@ -67,7 +67,8 @@ const filters = [
             "CBRN",
             "GIS",
             "GSUTR",
-            "GIGR"
+            "GIGR",
+            "JAEGER CORPS"
         ]
     }
 ];

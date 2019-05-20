@@ -164,6 +164,11 @@
         "role": "Defender",
         "unit": "SAS"
     },
+    "nokk": {
+        "displayName": "Nokk",
+        "role": "Attacker",
+        "unit": "JAEGER CORPS"
+    },
     "nomad": {
         "displayName": "Nomad",
         "role": "Attacker",
