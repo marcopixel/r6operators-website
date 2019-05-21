@@ -68,7 +68,8 @@ const filters = [
             "GIS",
             "GSUTR",
             "GIGR",
-            "JAEGER CORPS"
+            "JAEGER CORPS",
+            "SECRET SERVICE"
         ]
     }
 ];

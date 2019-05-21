@@ -224,6 +224,11 @@
         "role": "Defender",
         "unit": "SMB"
     },
+    "warden": {
+        "displayName": "Warden",
+        "role": "Defender",
+        "unit": "SECRET SERVICE"
+    },
     "ying": {
         "displayName": "Ying",
         "role": "Attacker",
