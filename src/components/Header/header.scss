@@ -36,11 +36,17 @@
     }
     &__subtitle {
         font-size: 1em;
-        font-weight: 400;
         margin-bottom: 1.5rem;
+        font-weight: 400;
         color: rgba($font-color-white, 0.5);
     }
+    &__github {
+        margin-bottom: 1.5rem;
 
+        * {
+            margin: 0.2rem;
+        }
+    }
     &__downloadAll {
         display: flex;
         flex-direction: column;
