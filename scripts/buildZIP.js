@@ -42,6 +42,8 @@ function generateSingleZIP(fileName) {
         archive.append(fs.createReadStream(`${config.svgPath}/${fileName}.svg`), { name: `${fileName}.svg` });
         archive.append(fs.createReadStream(`${config.pngPath}/${fileName}.png`), { name: `${fileName}.png` });
         archive.append(fs.createReadStream(`${config.aiPath}/${fileName}.ai`), { name: `${fileName}.ai` });
+        archive.file(path.join(__dirname,`./util/readme.txt`), { name: `readme.txt` });
+        archive.file(path.join(__dirname,`../LICENSE.txt`), { name: `license.txt` });
 
         // finalize it and save it
         archive.finalize();
