@@ -7,7 +7,7 @@ module.exports = {
         siteName: `r6-operatoricons`,
         siteUrl: `https://marcopixel.eu/r6-operatoricons/`,
         title: `r6-operatoricons - Rainbow Six: Siege operator icons`,
-        description: `r6-operatoricons is a collection of Rainbow Six: Siege operator icons avaliable in SVG, PNG and AI. Each icon is made by hand in Adobe Illustrator and might have slight differences.`,
+        description: `r6-operatoricons is a collection of Rainbow Six: Siege operator icons avaliable in SVG, PNG and AI. Each icon is made by hand in Adobe Illustrator and is free to download under the Creative Commons Attribution 4.0 license.`,
         keywords: `rainbow six siege, rainbow6, ubisoft, operator, icons`,
         author: `marcopixel <marcopixel@live.de>`,
         authorTwitter: `@marcopixel`,
