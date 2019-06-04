@@ -1,7 +1,7 @@
 {
     "name": "r6-operatoricons",
     "version": "2.0.0",
-    "description": "r6-operatoricons is a collection of Rainbow Six: Siege operator icons avaliable in SVG, PNG and AI. Each icon is made by hand in Adobe Illustrator and is free to download under the Creative Commons Attribution 4.0 license.",
+    "description": "r6-operatoricons is a collection of Rainbow Six: Siege operator icons available in SVG, PNG and AI. Each icon is made by hand in Adobe Illustrator and is free to download under the Creative Commons Attribution 4.0 license.",
     "main": "index.js",
     "repository": "https://github.com/MarcoPixel/r6-operatoricons",
     "author": "Marco Vockner <marcopixel@live.de>",
@@ -22,7 +22,9 @@
         "eslint-config-prettier": "^4.3.0",
         "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-react": "^7.13.0",
+        "glob": "^7.1.4",
         "prettier": "^1.17.1",
+        "sharp": "^0.22.1",
         "typescript": "^3.4.5"
     },
     "prettier": {
