@@ -11,6 +11,7 @@
     ],
     "license": "CC-BY-4.0",
     "scripts": {
+        "build:png": "node ./scripts/processPNG.js",
         "type-check": "tsc --noEmit",
         "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
         "lint:fix": "yarn lint --fix"
@@ -23,6 +24,7 @@
         "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-react": "^7.13.0",
         "glob": "^7.1.4",
+        "ora": "^3.4.0",
         "prettier": "^1.17.1",
         "sharp": "^0.22.1",
         "typescript": "^3.4.5"

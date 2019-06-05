@@ -1,0 +1,267 @@
+{
+    "alibi": {
+        "displayName": "Alibi",
+        "role": "Defender",
+        "unit": "GIS"
+    },
+    "ash": {
+        "displayName": "Ash",
+        "role": "Attacker",
+        "unit": "FBI"
+    },
+    "bandit": {
+        "displayName": "Bandit",
+        "role": "Defender",
+        "unit": "GSG9"
+    },
+    "blackbeard": {
+        "displayName": "Blackbeard",
+        "role": "Attacker",
+        "unit": "SEALS"
+    },
+    "blitz": {
+        "displayName": "Blitz",
+        "role": "Attacker",
+        "unit": "GSG9"
+    },
+    "buck": {
+        "displayName": "Buck",
+        "role": "Attacker",
+        "unit": "JTF-2"
+    },
+    "capitao": {
+        "displayName": "Capitao",
+        "role": "Attacker",
+        "unit": "BOPE"
+    },
+    "castle": {
+        "displayName": "Castle",
+        "role": "Defender",
+        "unit": "FBI"
+    },
+    "caveira": {
+        "displayName": "Caveira",
+        "role": "Defender",
+        "unit": "BOPE"
+    },
+    "clash": {
+        "displayName": "Clash",
+        "role": "Defender",
+        "unit": "GSUTR"
+    },
+    "doc": {
+        "displayName": "Doc",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
+    "dokkaebi": {
+        "displayName": "Dokkaebi",
+        "role": "Attacker",
+        "unit": "SMB"
+    },
+    "echo": {
+        "displayName": "Echo",
+        "role": "Defender",
+        "unit": "SAT"
+    },
+    "ela": {
+        "displayName": "Ela",
+        "role": "Defender",
+        "unit": "GROM"
+    },
+    "finka": {
+        "displayName": "Finka",
+        "role": "Attacker",
+        "unit": "CBRN"
+    },
+    "frost": {
+        "displayName": "Frost",
+        "role": "Defender",
+        "unit": "JTF-2"
+    },
+    "fuze": {
+        "displayName": "Fuze",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
+    "glaz": {
+        "displayName": "Glaz",
+        "role": "Attacker",
+        "unit": "SPETSNAZ"
+    },
+    "gridlock": {
+        "displayName": "Gridlock",
+        "role": "Attacker",
+        "unit": "SASR"
+    },
+    "hibana": {
+        "displayName": "Hibana",
+        "role": "Attacker",
+        "unit": "SAT"
+    },
+    "iq": {
+        "displayName": "IQ",
+        "role": "Attacker",
+        "unit": "GSG9"
+    },
+    "jackal": {
+        "displayName": "Jackal",
+        "role": "Attacker",
+        "unit": "GEO"
+    },
+    "jager": {
+        "displayName": "Jäger",
+        "role": "Defender",
+        "unit": "GSG9"
+    },
+    "kaid": {
+        "displayName": "Kaid",
+        "role": "Defender",
+        "unit": "GIGR"
+    },
+    "kapkan": {
+        "displayName": "Kapkan",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
+    },
+    "lesion": {
+        "displayName": "Lesion",
+        "role": "Defender",
+        "unit": "SDU"
+    },
+    "lion": {
+        "displayName": "Lion",
+        "role": "Attacker",
+        "unit": "CBRN"
+    },
+    "maestro": {
+        "displayName": "Maestro",
+        "role": "Defender",
+        "unit": "GIS"
+    },
+    "maverick": {
+        "displayName": "Maverick",
+        "role": "Attacker",
+        "unit": "GSUTR"
+    },
+    "mira": {
+        "displayName": "Mira",
+        "role": "Defender",
+        "unit": "GEO"
+    },
+    "montagne": {
+        "displayName": "Montagne",
+        "role": "Attacker",
+        "unit": "GIGN"
+    },
+    "mozzie": {
+        "displayName": "Mozzie",
+        "role": "Defender",
+        "unit": "SASR"
+    },
+    "mute": {
+        "displayName": "Mute",
+        "role": "Defender",
+        "unit": "SAS"
+    },
+    "nokk": {
+        "displayName": "Nokk",
+        "role": "Attacker",
+        "unit": "JAEGER CORPS"
+    },
+    "nomad": {
+        "displayName": "Nomad",
+        "role": "Attacker",
+        "unit": "GIGR"
+    },
+    "pulse": {
+        "displayName": "Pulse",
+        "role": "Defender",
+        "unit": "FBI"
+    },
+    "rook": {
+        "displayName": "Rook",
+        "role": "Defender",
+        "unit": "GIGN"
+    },
+    "sledge": {
+        "displayName": "Sledge",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
+    "smoke": {
+        "displayName": "Smoke",
+        "role": "Defender",
+        "unit": "SAS"
+    },
+    "tachanka": {
+        "displayName": "Tachanka",
+        "role": "Defender",
+        "unit": "SPETSNAZ"
+    },
+    "thatcher": {
+        "displayName": "Thatcher",
+        "role": "Attacker",
+        "unit": "SAS"
+    },
+    "thermite": {
+        "displayName": "Thermite",
+        "role": "Attacker",
+        "unit": "FBI"
+    },
+    "twitch": {
+        "displayName": "Twitch",
+        "role": "Attacker",
+        "unit": "GIGN"
+    },
+    "valkyrie": {
+        "displayName": "Valkyrie",
+        "role": "Defender",
+        "unit": "SEALS"
+    },
+    "vigil": {
+        "displayName": "Vigil",
+        "role": "Defender",
+        "unit": "SMB"
+    },
+    "warden": {
+        "displayName": "Warden",
+        "role": "Defender",
+        "unit": "SECRET SERVICE"
+    },
+    "ying": {
+        "displayName": "Ying",
+        "role": "Attacker",
+        "unit": "SDU"
+    },
+    "zofia": {
+        "displayName": "Zofia",
+        "role": "Attacker",
+        "unit": "GROM"
+    },
+    "recruit-blue": {
+        "displayName": "Recruit (Blue)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-green": {
+        "displayName": "Recruit (Green)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-orange": {
+        "displayName": "Recruit (Orange)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-red": {
+        "displayName": "Recruit (Red)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "recruit-yellow": {
+        "displayName": "Recruit (Yellow)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    }
+}
