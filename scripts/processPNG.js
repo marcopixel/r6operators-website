@@ -1,4 +1,3 @@
-const fs = require("fs");
 const path = require("path");
 const ora = require("ora");
 const chalk = require("chalk");
@@ -16,22 +15,33 @@ async function processPNG(array) {
     let text = `Building PNG files`;
     const spinner = ora(text).start();
 
+    // exit if array is empty
+    if (!Array.isArray(array) || !array.length) {
+        spinner.text = `${chalk.red(text)} - No files found to convert!`;
+        spinner.fail();
+        process.exit(0);
+    }
+
     // map the icon array and convert each icon
     var result = array.map(async item => {
-        const fileName = path.basename(item, path.extname(item));
+        const fileName = path.normalize(path.basename(item, path.extname(item)));
+        const pathName = path.normalize(path.resolve(config.sourcePath + path.basename(path.dirname(item))));
+
         return await new Promise((resolve, reject) => {
-            generatePNG(item, `${config.sourcePath}/${fileName}/`)
+            generatePNG(item, pathName)
                 .then(
                     // success
                     res => {
                         outputCount++;
-                        spinner.text = text + ` - ${outputCount}/${inputCount}`;
+                        // prettier-ignore
+                        spinner.text = text + ` - ${outputCount}/${inputCount} - ${fileName}`;
                         resolve(item);
                     },
                     // error
                     rej => {
+                        outputCount++;
                         // prettier-ignore
-                        spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} ${fileName}${path.extname(item)} failed!`;
+                        spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${fileName} - Failed to convert!`;
                         reject(rej);
                     }
                 )

@@ -7,7 +7,7 @@ const config = require("../config.js");
 async function generatePNG(file, dest) {
     // set DPI and fileName
     const image = sharp(file, { density: 400 });
-    const fileName = path.basename(file, path.extname(file));
+    const fileName = path.normalize(path.basename(file, path.extname(file)));
 
     await new Promise((resolve, reject) => {
         image
@@ -19,7 +19,7 @@ async function generatePNG(file, dest) {
                     image
                         .resize({ width: config.pngConfig.width, height: config.pngConfig.height }) // resize image
                         .png({ force: true }) // force PNG output
-                        .toFile(dest + fileName + ".png")
+                        .toFile(path.normalize(dest + path.sep + fileName + ".png"))
                         .then(
                             res => {
                                 // success
