@@ -17,7 +17,7 @@ async function processZIP(array) {
 
     // exit if array is empty
     if (!Array.isArray(array) || !array.length) {
-        spinner.text = `${chalk.red(text)} - No files found to convert!`;
+        spinner.text = `${chalk.red(text)} - icons.json not found or corrupt!`;
         spinner.fail();
         process.exit(0);
     }

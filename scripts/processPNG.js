@@ -17,31 +17,30 @@ async function processPNG(array) {
 
     // exit if array is empty
     if (!Array.isArray(array) || !array.length) {
-        spinner.text = `${chalk.red(text)} - No files found to convert!`;
+        spinner.text = `${chalk.red(text)} - icons.json not found or corrupt!`;
         spinner.fail();
         process.exit(0);
     }
 
     // map the icon array and convert each icon
     var result = array.map(async item => {
-        const fileName = path.normalize(path.basename(item, path.extname(item)));
-        const pathName = path.normalize(path.resolve(config.sourcePath + path.basename(path.dirname(item))));
+        const itemPath = path.join(config.sourcePath + path.sep + item + path.sep);
 
         return await new Promise((resolve, reject) => {
-            generatePNG(item, pathName)
+            generatePNG(item, itemPath)
                 .then(
                     // success
                     res => {
                         outputCount++;
                         // prettier-ignore
-                        spinner.text = text + ` - ${outputCount}/${inputCount} - ${fileName}`;
+                        spinner.text = text + ` - ${outputCount}/${inputCount} - ${item}`;
                         resolve(item);
                     },
                     // error
                     rej => {
                         outputCount++;
                         // prettier-ignore
-                        spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${fileName} - Failed to convert!`;
+                        spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${item} - Failed to convert!`;
                         reject(rej);
                     }
                 )
@@ -75,6 +74,6 @@ async function processPNG(array) {
 }
 
 // execute it
-processPNG(config.svgArray);
+processPNG(config.iconArray);
 
 module.exports = processPNG;

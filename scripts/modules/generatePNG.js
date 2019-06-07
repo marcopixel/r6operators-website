@@ -4,10 +4,10 @@ const sharp = require("sharp");
 const config = require("../config.js");
 
 // convert a single SVG file to an PNG
-async function generatePNG(file, dest) {
+async function generatePNG(fileName, srcPath) {
+    const file = path.join(srcPath + fileName + ".svg");
     // set DPI and fileName
     const image = sharp(file, { density: 400 });
-    const fileName = path.normalize(path.basename(file, path.extname(file)));
 
     await new Promise((resolve, reject) => {
         image
@@ -19,7 +19,7 @@ async function generatePNG(file, dest) {
                     image
                         .resize({ width: config.pngConfig.width, height: config.pngConfig.height }) // resize image
                         .png({ force: true }) // force PNG output
-                        .toFile(path.normalize(dest + path.sep + fileName + ".png"))
+                        .toFile(srcPath + fileName + ".png")
                         .then(
                             res => {
                                 // success
