@@ -15,6 +15,12 @@
             "request": "launch",
             "name": "scripts/processPNG.js",
             "program": "${workspaceFolder}/scripts/processPNG.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "scripts/processZIP.js",
+            "program": "${workspaceFolder}/scripts/processZIP.js"
         }
     ]
 }

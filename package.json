@@ -12,6 +12,7 @@
     "license": "CC-BY-4.0",
     "scripts": {
         "build:png": "node ./scripts/processPNG.js",
+        "build:zip": "node ./scripts/processZIP.js",
         "type-check": "tsc --noEmit",
         "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
         "lint:fix": "yarn lint --fix"
