@@ -38,7 +38,7 @@ export default class IconTile extends React.Component<IIconTileProps, any> {
             <div className={`iconTile ${this.props.displayName}`}>
                 <Icon glyph={this.props.glyph} />
                 <div className="iconTile__content">
-                    <div className="iconTile__name">{this.props.displayName}</div>
+                    <div className="iconTile__name"><span>{this.props.displayName}</span></div>
                     <div className="iconTile__postcontent">
                         <a href={this.props.svgFile} title={`Download ${this.props.displayName}.svg`} onClick={e => this.logAction(this.props.displayName + ".svg", "SVG")} download>
                             SVG

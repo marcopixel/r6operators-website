@@ -1,8 +1,9 @@
 @import "~scss/variables";
 @import "~scss/mixins";
 @import "~scss/colors";
-$slideInOffset: -1.5rem;
+$slideInOffset: 2rem;
 $tileGutterWidth: 2rem;
+$tileContentHeight: 3rem;
 
 .iconTile {
     position: relative;
@@ -11,7 +12,7 @@ $tileGutterWidth: 2rem;
     align-items: center;
     width: calc(50% - #{$tileGutterWidth});
     margin: 0.5rem;
-    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    padding: 0.5rem 0.5rem $tileContentHeight 0.5rem;
     overflow: hidden;
     border-radius: $borderradius;
     background: $tile-background;
@@ -31,7 +32,7 @@ $tileGutterWidth: 2rem;
         align-items: center;
         position: absolute;
         width: 100%;
-        bottom: $slideInOffset;
+        bottom: -$slideInOffset;
         padding: 1rem 0;
         @include ease-in-out(all, 200ms);
     }
@@ -63,10 +64,19 @@ $tileGutterWidth: 2rem;
     }
 
     &__name {
+        display: flex;
+        align-items: center;
+        height: 2.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-bottom: 0.5em;
         font-size: 1em;
         font-weight: 600;
-        line-height: 1.5;
-        padding-bottom: 0.35em;
+        line-height: 1.2;
+
+        span {
+            text-align: center;
+        }
 
         @include medium {
             font-size: 1.125em;
@@ -77,7 +87,7 @@ $tileGutterWidth: 2rem;
         @include boxshadow;
 
         .iconTile__content {
-            transform: translateY($slideInOffset);
+            transform: translateY(-$slideInOffset);
             background: white;
             color: black;
             @include boxshadow;
