@@ -1,4 +1,4 @@
-![r6-operatoricons header image](https://i.imgur.com/q3xCiwa.png)
+![r6-operatoricons header image](https://raw.githubusercontent.com/marcopixel/r6-operatoricons/master/static/opengraph.png)
 
 # r6-operatoricons
 ![GitHub last commit](https://img.shields.io/github/last-commit/MarcoPixel/r6-operatoricons.svg?style=for-the-badge)
