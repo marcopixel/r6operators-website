@@ -16,6 +16,6 @@ const pngArray = glob.sync(sourcePath + "**/*.png", {});
 const iconArray = Object.keys(iconData);
 
 // dependency configs
-const pngConfig = { height: "1400", width: "1400" };
+const pngConfig = { height: 1400, width: 1400 };
 
 export { iconData, sourcePath, readmePath, licensePath, svgArray, aiArray, pngArray, iconArray, pngConfig };

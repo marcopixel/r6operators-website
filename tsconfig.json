@@ -15,6 +15,7 @@
         "noEmit": true,
         "skipLibCheck": true,
         "baseUrl": "./src",
+        "sourceMap": true,
         "paths": {
             "@components/*": ["./src/components/*"],
             "@images/*": ["./src/icons/*"],

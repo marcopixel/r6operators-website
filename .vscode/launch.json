@@ -5,22 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug processPNG",
             "type": "node",
             "request": "launch",
-            "name": "scripts/index.js",
-            "program": "${workspaceFolder}/scripts/index.js"
+            "args": ["${workspaceFolder}/scripts/processPNG.ts"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
         },
         {
+            "name": "Debug processZIP",
             "type": "node",
             "request": "launch",
-            "name": "scripts/processPNG.js",
-            "program": "${workspaceFolder}/scripts/processPNG.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "scripts/processZIP.js",
-            "program": "${workspaceFolder}/scripts/processZIP.js"
+            "args": ["${workspaceFolder}/scripts/processZIP.ts"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
         }
     ]
 }

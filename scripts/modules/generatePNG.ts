@@ -17,7 +17,7 @@ export default async function generatePNG(fileName, srcPath) {
                 // check if file is a valid SVG file
                 if (res.format === "svg") {
                     image
-                        .resize({ width: config.pngConfig.width, height: config.pngConfig.height }) // resize image
+                        .resize(config.pngConfig.height, config.pngConfig.width) // resize image
                         .png({ force: true }) // force PNG output
                         .toFile(srcPath + fileName + ".png")
                         .then(
