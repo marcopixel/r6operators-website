@@ -94,6 +94,11 @@
         "role": "Attacker",
         "unit": "SPETSNAZ"
     },
+    "goyo": {
+        "displayName": "Amaru",
+        "role": "Attacker",
+        "unit": "FES"
+    },
     "gridlock": {
         "displayName": "Gridlock",
         "role": "Attacker",
