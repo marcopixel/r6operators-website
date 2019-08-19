@@ -2,23 +2,32 @@
     "name": "r6-operatoricons",
     "version": "2.0.0",
     "description": "r6-operatoricons is a collection of Rainbow Six: Siege operator icons available in SVG, PNG and AI. Each icon is made by hand in Adobe Illustrator and is free to download under the Creative Commons Attribution 4.0 license.",
-    "main": "index.js",
     "repository": "https://github.com/MarcoPixel/r6-operatoricons",
+    "license": "CC-BY-4.0",
     "author": "Marco Vockner <marcopixel@live.de>",
     "contributors": [
         "dtSniper (https://twitter.com/sniperdt)",
         "Joey Foo (https://github.com/joeyfoo)"
     ],
-    "license": "CC-BY-4.0",
+    "main": "index.js",
     "scripts": {
         "build:png": "ts-node ./scripts/processPNG.ts",
         "build:zip": "ts-node ./scripts/processZIP.ts",
-        "type-check": "tsc --noEmit",
         "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-        "lint:fix": "yarn lint --fix"
+        "lint:fix": "yarn lint --fix",
+        "type-check": "tsc --noEmit"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "useTabs": false
     },
     "devDependencies": {
+        "@types/archiver": "^3.0.0",
+        "@types/glob": "^7.1.1",
         "@types/node": "^12.7.2",
+        "@types/sharp": "^0.22.2",
         "@typescript-eslint/eslint-plugin": "^2.0.0",
         "@typescript-eslint/parser": "^2.0.0",
         "archiver": "^3.1.1",
@@ -32,11 +41,5 @@
         "sharp": "^0.23.0",
         "ts-node": "^8.3.0",
         "typescript": "^3.5.3"
-    },
-    "prettier": {
-        "singleQuote": false,
-        "tabWidth": 4,
-        "useTabs": false,
-        "printWidth": 120
     }
 }
