@@ -263,5 +263,30 @@
         "displayName": "Recruit (Yellow)",
         "role": "Recruit",
         "unit": "Recruit"
+    },
+    "outbreakrecruit-blue": {
+        "displayName": "Outbreak Recruit (Blue)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "outbreakrecruit-green": {
+        "displayName": "Outbreak Recruit (Green)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "outbreakrecruit-orange": {
+        "displayName": "Outbreak Recruit (Orange)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "outbreakrecruit-red": {
+        "displayName": "Outbreak Recruit (Red)",
+        "role": "Recruit",
+        "unit": "Recruit"
+    },
+    "outbreakrecruit-yellow": {
+        "displayName": "Outbreak Recruit (Yellow)",
+        "role": "Recruit",
+        "unit": "Recruit"
     }
 }
