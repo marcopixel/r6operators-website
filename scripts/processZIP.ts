@@ -6,7 +6,7 @@ import generateZIP from "./modules/generateZIP";
 
 import * as config from "./config";
 
-async function processZIP(array) {
+export async function processZIP(array) {
     // counter vars
     const inputCount = array.length;
     let outputCount = 0;
@@ -74,5 +74,3 @@ async function processZIP(array) {
 
 // execute it
 processZIP(config.iconArray);
-
-module.exports = processZIP;

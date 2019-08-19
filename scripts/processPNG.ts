@@ -6,7 +6,7 @@ import generatePNG from "./modules/generatePNG";
 
 import * as config from "./config";
 
-async function processPNG(array) {
+export async function processPNG(array) {
     // counter vars
     const inputCount = array.length;
     let outputCount = 0;
@@ -75,5 +75,3 @@ async function processPNG(array) {
 
 // execute it
 processPNG(config.iconArray);
-
-module.exports = processPNG;
