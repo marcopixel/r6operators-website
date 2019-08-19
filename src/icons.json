@@ -4,6 +4,11 @@
         "role": "Defender",
         "unit": "GIS"
     },
+    "amaru": {
+        "displayName": "Amaru",
+        "role": "Attacker",
+        "unit": "APCA"
+    },
     "ash": {
         "displayName": "Ash",
         "role": "Attacker",
