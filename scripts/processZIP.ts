@@ -1,10 +1,10 @@
-const path = require("path");
-const ora = require("ora");
-const chalk = require("chalk");
+import * as path from "path";
+import ora from "ora";
+import chalk from "chalk";
 
-const generateZIP = require("./modules/generateZIP.js");
+import generateZIP from "./modules/generateZIP";
 
-const config = require("./config.js");
+import * as config from "./config";
 
 async function processZIP(array) {
     // counter vars
@@ -12,7 +12,7 @@ async function processZIP(array) {
     let outputCount = 0;
 
     // spinner
-    let text = `Building ZIP files`;
+    const text = `Building ZIP files`;
     const spinner = ora(text).start();
 
     // exit if array is empty
@@ -23,13 +23,13 @@ async function processZIP(array) {
     }
 
     // map the icon array and convert each icon
-    var result = array.map(async item => {
+    const result = array.map(async item => {
         const itemPath = path.join(config.sourcePath + path.sep + item + path.sep);
         return await new Promise((resolve, reject) => {
             generateZIP(item, itemPath)
                 .then(
                     // success
-                    res => {
+                    () => {
                         outputCount++;
                         // prettier-ignore
                         spinner.text = text + ` - ${outputCount}/${inputCount} - ${item}`;
@@ -54,7 +54,7 @@ async function processZIP(array) {
     Promise.all(result)
         .then(
             // success
-            res => {
+            () => {
                 // prettier-ignore
                 spinner.text = `${chalk.green(text)} - ${outputCount}/${inputCount} items successfully converted!`;
                 spinner.succeed();

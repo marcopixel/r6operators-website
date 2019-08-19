@@ -1,10 +1,10 @@
-const path = require("path");
-const sharp = require("sharp");
+import path from "path";
+import sharp from "sharp";
 
-const config = require("../config.js");
+import * as config from "../config";
 
 // convert a single SVG file to an PNG
-async function generatePNG(fileName, srcPath) {
+export default async function generatePNG(fileName, srcPath) {
     const file = path.join(srcPath + fileName + ".svg");
     // set DPI and fileName
     const image = sharp(file, { density: 400 });
@@ -45,5 +45,3 @@ async function generatePNG(fileName, srcPath) {
             });
     });
 }
-
-module.exports = generatePNG;

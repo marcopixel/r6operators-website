@@ -1,11 +1,10 @@
-const fs = require("fs");
-const path = require("path");
-const archiver = require("archiver");
+import fs from "fs";
+import archiver from "archiver";
 
-const config = require("../config.js");
+import * as config from "../config";
 
 // add all single icon files into a zip archive
-async function generateZIP(fileName, srcPath) {
+export default async function generateZIP(fileName, srcPath) {
     return new Promise((resolve, reject) => {
         // initialize archiver
         const output = fs.createWriteStream(srcPath + `${fileName}.zip`);
@@ -51,5 +50,3 @@ async function generateZIP(fileName, srcPath) {
         archive.finalize();
     });
 }
-
-module.exports = generateZIP;

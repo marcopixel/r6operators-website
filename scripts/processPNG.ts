@@ -1,10 +1,10 @@
-const path = require("path");
-const ora = require("ora");
-const chalk = require("chalk");
+import * as path from "path";
+import ora from "ora";
+import chalk from "chalk";
 
-const generatePNG = require("./modules/generatePNG.js");
+import generatePNG from "./modules/generatePNG";
 
-const config = require("./config.js");
+import * as config from "./config";
 
 async function processPNG(array) {
     // counter vars
@@ -12,7 +12,7 @@ async function processPNG(array) {
     let outputCount = 0;
 
     // spinner
-    let text = `Building PNG files`;
+    const text = `Building PNG files`;
     const spinner = ora(text).start();
 
     // exit if array is empty
@@ -23,14 +23,14 @@ async function processPNG(array) {
     }
 
     // map the icon array and convert each icon
-    var result = array.map(async item => {
+    const result = array.map(async item => {
         const itemPath = path.join(config.sourcePath + path.sep + item + path.sep);
 
         return await new Promise((resolve, reject) => {
             generatePNG(item, itemPath)
                 .then(
                     // success
-                    res => {
+                    () => {
                         outputCount++;
                         // prettier-ignore
                         spinner.text = text + ` - ${outputCount}/${inputCount} - ${item}`;
@@ -55,7 +55,7 @@ async function processPNG(array) {
     Promise.all(result)
         .then(
             // success
-            res => {
+            () => {
                 // prettier-ignore
                 spinner.text = `${chalk.green(text)} - ${outputCount}/${inputCount} items successfully converted!`;
                 spinner.succeed();

@@ -1,9 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const glob = require("glob");
+import * as path from "path";
+import * as glob from "glob";
 
 // icon data (JSON)
-const iconData = require("../icons/icons.json");
+import iconData from "../icons/icons.json";
 
 // paths
 const sourcePath = path.join(__dirname, `../icons/`);
@@ -19,14 +18,4 @@ const iconArray = Object.keys(iconData);
 // dependency configs
 const pngConfig = { height: "1400", width: "1400" };
 
-module.exports = {
-    iconData,
-    sourcePath,
-    readmePath,
-    licensePath,
-    svgArray,
-    aiArray,
-    pngArray,
-    iconArray,
-    pngConfig
-};
+export { iconData, sourcePath, readmePath, licensePath, svgArray, aiArray, pngArray, iconArray, pngConfig };
