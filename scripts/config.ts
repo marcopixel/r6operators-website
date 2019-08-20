@@ -6,6 +6,7 @@ import iconData from "../icons/icons.json";
 
 // paths
 const sourcePath = path.join(__dirname, `../icons/`);
+const destPath = path.join(__dirname, `../dist/`);
 const readmePath = path.join(__dirname, `/util/readme.txt`);
 const licensePath = path.join(__dirname, `../license.txt`);
 
@@ -31,4 +32,16 @@ const svgoConfig = {
     ]
 };
 
-export { iconData, sourcePath, readmePath, licensePath, svgArray, aiArray, pngArray, iconArray, pngConfig, svgoConfig };
+export {
+    iconData,
+    sourcePath,
+    destPath,
+    readmePath,
+    licensePath,
+    svgArray,
+    aiArray,
+    pngArray,
+    iconArray,
+    pngConfig,
+    svgoConfig
+};

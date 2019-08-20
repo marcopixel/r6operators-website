@@ -130,6 +130,7 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/osx,vim,node,windows,visualstudiocode
 
-### Gatsby ###
+### r6-operatoricons specific ###
 public
+dist
 .cache

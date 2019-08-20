@@ -13,6 +13,7 @@
     "scripts": {
         "build:png": "ts-node ./scripts/processPNG.ts",
         "build:zip": "ts-node ./scripts/processZIP.ts",
+        "build:package": "ts-node ./scripts/processPACKAGE.ts",
         "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
         "lint:fix": "yarn lint --fix",
         "type-check": "tsc --noEmit"
