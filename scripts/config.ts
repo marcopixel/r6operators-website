@@ -17,5 +17,18 @@ const iconArray = Object.keys(iconData);
 
 // dependency configs
 const pngConfig = { height: 1400, width: 1400 };
+const svgoConfig = {
+    plugins: [
+        {
+            removeViewBox: true
+        },
+        {
+            convertPathData: false
+        },
+        {
+            removeRasterImages: false
+        }
+    ]
+};
 
-export { iconData, sourcePath, readmePath, licensePath, svgArray, aiArray, pngArray, iconArray, pngConfig };
+export { iconData, sourcePath, readmePath, licensePath, svgArray, aiArray, pngArray, iconArray, pngConfig, svgoConfig };
