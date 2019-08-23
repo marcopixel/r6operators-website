@@ -6,14 +6,14 @@ import iconData from "../icons/icons.json";
 
 // paths
 const sourcePath = path.join(__dirname, `../icons/`);
-const destPath = path.join(__dirname, `../dist/`);
+const destinationPath = path.join(__dirname, `../dist/`);
 const readmePath = path.join(__dirname, `/util/readme.txt`);
 const licensePath = path.join(__dirname, `../license.txt`);
 
 // arrays
-const svgArray = glob.sync(sourcePath + "**/*.svg", {});
-const aiArray = glob.sync(sourcePath + "**/*.ai", {});
-const pngArray = glob.sync(sourcePath + "**/*.png", {});
+const svgArray = glob.sync(`${sourcePath}**/*.svg`, {});
+const aiArray = glob.sync(`${sourcePath}**/*.ai`, {});
+const pngArray = glob.sync(`${sourcePath}**/*.png`, {});
 const iconArray = Object.keys(iconData);
 
 // dependency configs
@@ -35,7 +35,7 @@ const svgoConfig = {
 export {
     iconData,
     sourcePath,
-    destPath,
+    destinationPath,
     readmePath,
     licensePath,
     svgArray,

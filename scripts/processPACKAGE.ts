@@ -1,70 +1,46 @@
+/* eslint-disable unicorn/filename-case */
 import ora from "ora";
 import chalk from "chalk";
 
 import * as config from "./config";
-import generatePACKAGE from "./modules/generatePACKAGE";
+import generatePackage from "./modules/generatePackage";
 
-export function processPACKAGE(array) {
-    // spinner
-    const text = `Generating full package ZIP`;
-    const spinner = ora(text).start();
+// generate PNG files
+export default async function generateFullPackage(array) {
+    return new Promise((resolve, reject) => {
+        // spinner
+        const text = chalk.bold("Generating full package ZIP");
+        const spinner = ora({ text }).start();
 
-    // counter vars
-    const inputCount = array.length;
-    let outputCount = 0;
-
-    // exit if array is empty
-    if (!Array.isArray(array) || !array.length) {
-        spinner.text = `${chalk.red(text)} - icons.json not found or corrupt!`;
-        spinner.fail();
-        process.exit(0);
-    }
-
-    const result = new Promise((resolve, reject) => {
-        generatePACKAGE(array, config.sourcePath, config.destPath)
+        // exit if array is empty/corrupt
+        if (!Array.isArray(array) || array.length === 0) {
+            spinner.text = `${chalk.red("ERROR")} - icons.json not found or corrupt!`;
+            spinner.fail();
+            throw new Error("icons.json not found or corrupt!");
+        }
+        // eslint-disable-next-line promise/param-names
+        generatePackage(array, config.sourcePath, config.destinationPath)
             .then(
-                // success
-                () => {
-                    outputCount++;
-                    // prettier-ignore
-                    spinner.text = text + ` - ${outputCount}/${inputCount} - `;
-                    resolve();
+                onfulfilled => {
+                    spinner.text = `${chalk.green(text)} - Package succesfully created!`;
+                    spinner.succeed();
+                    return resolve(onfulfilled);
                 },
-                // error
-                rej => {
-                    outputCount++;
-                    // prettier-ignore
+                onrejected => {
                     spinner.text = `${chalk.red(text)} - Failed to create package!`;
-                    reject(rej);
+                    spinner.fail();
+                    throw new Error(onrejected.error);
                 }
             )
-            // catch any unwanted errors
-            .catch(err => {
-                reject(err);
+            .catch(error => {
+                reject(error);
             });
     });
-
-    // wait for promise to finish
-    result
-        .then(
-            // success
-            () => {
-                // prettier-ignore
-                spinner.text = `${chalk.green(text)} - Package succesfully created!`;
-                spinner.succeed();
-            },
-            // reject
-            rej => {
-                spinner.fail();
-                console.log(rej.stack);
-                process.exit(1);
-            }
-        )
-        // catch unwanted errors
-        .catch(err => {
-            console.log(err);
-        });
 }
 
-// execute it
-processPACKAGE(config.iconArray);
+// generate full package
+generateFullPackage(config.iconArray)
+    // catch any errors
+    .catch(error => {
+        console.error(error);
+    });

@@ -1,47 +1,45 @@
+/* eslint-disable unicorn/filename-case */
 import path from "path";
 import sharp from "sharp";
 
 import * as config from "../config";
 
-// convert a single SVG file to an PNG
-export default async function generatePNG(fileName, srcPath) {
-    const file = path.join(srcPath + fileName + ".svg");
-    // set DPI and fileName
-    const image = sharp(file, { density: 400 });
+export default async function generatePNG(sourceFile) {
+    // get file name + init sharp
+    const fileName = path.basename(sourceFile, path.extname(sourceFile));
+    const image = sharp(sourceFile, { density: 400 });
 
-    await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         image
-            // get metadata from source file
+            // get file metadata
             .metadata()
-            .then(res => {
-                // check if file is a valid SVG file
-                if (res.format === "svg") {
-                    image
-                        .resize(config.pngConfig.height, config.pngConfig.width) // resize image
-                        .png({ force: true }) // force PNG output
-                        .toFile(srcPath + fileName + ".png")
-                        .then(
-                            res => {
-                                // success
-                                resolve(res);
-                            },
-                            rej => {
-                                // fail
-                                reject(rej);
-                            }
-                        )
-                        // catch any errors on conversation
-                        .catch(err => {
-                            reject(err);
-                        });
+            // check if file is svg
+            .then(metadata => {
+                if (metadata.format !== "svg") {
+                    throw new Error(`The source file is not an SVG file! - ${path.normalize(sourceFile)}`);
                 } else {
-                    // throw error if file is not a SVG
-                    reject(new Error("File is not an SVG"));
+                    return;
                 }
             })
+            // execute image manipulations (resize image and save it as png)
+            .then(() => {
+                return image
+                    .resize(config.pngConfig.height, config.pngConfig.width) // resize image
+                    .png({ force: true }) // force PNG output
+                    .toFile(path.normalize(`${path.dirname(sourceFile)}/${fileName}.png`)); // save to file
+            })
+            // finish promise
+            .then(
+                onFulfilled => {
+                    return resolve(onFulfilled);
+                },
+                onRejected => {
+                    return reject(onRejected);
+                }
+            )
             // catch unexpected errors
-            .catch(err => {
-                reject(err);
+            .catch(error => {
+                return reject(error);
             });
     });
 }

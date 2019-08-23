@@ -13,7 +13,7 @@ This zip file contains the different icons in three different file types:
 License
 -------
 r6-operatoricons is licensed under Creative Commons Attribution 4.0.
-This site is not affiliated with Ubisoft Entertainment. Rainbow Six Siege is a registered trademark of Ubisoft.
+This project is not affiliated with Ubisoft Entertainment. Rainbow Six Siege is a registered trademark of Ubisoft.
 
 Website
 -------

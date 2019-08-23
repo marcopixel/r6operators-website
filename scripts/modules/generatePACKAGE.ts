@@ -5,18 +5,18 @@ import * as config from "../config";
 import * as packageConfig from "../../package.json";
 
 // create full package for release
-export default async function generatePACKAGE(iconArray, srcPath, destPath) {
+export default async function generatePACKAGE(iconArray, sourcePath, destinationPath) {
     return new Promise((resolve, reject) => {
         // filename of the package zip
         const fileName = `r6-operatoricons-${packageConfig.version}.zip`;
 
         // check if dest folder exists and create it
-        if (!fs.existsSync(destPath)) {
-            fs.mkdirSync(destPath, { recursive: true });
+        if (!fs.existsSync(destinationPath)) {
+            fs.mkdirSync(destinationPath, { recursive: true });
         }
 
         // initialize archiver
-        const output = fs.createWriteStream(destPath + `${fileName}`);
+        const output = fs.createWriteStream(`${destinationPath}${fileName}`);
         const archive = archiver("zip", {
             zlib: { level: 9 }, // Sets the compression level.
             store: true
@@ -24,11 +24,7 @@ export default async function generatePACKAGE(iconArray, srcPath, destPath) {
 
         // catch errors
         output.on("error", error => {
-            if (error.code === "ENOENT") {
-                reject(error);
-            } else {
-                reject(error);
-            }
+            reject(error);
         });
 
         // resolve on finish
@@ -54,14 +50,14 @@ export default async function generatePACKAGE(iconArray, srcPath, destPath) {
         archive.file(config.licensePath, { name: `license.txt` });
 
         // map array and append each icon to the respective folder
-        iconArray.map(item => {
-            archive.append(fs.createReadStream(`${srcPath}//${item}//${item}.ai`), {
+        iconArray.forEach((item: string) => {
+            archive.append(fs.createReadStream(`${sourcePath}//${item}//${item}.ai`), {
                 name: `Illustrator (AI)/${item}.ai`
             });
-            archive.append(fs.createReadStream(`${srcPath}//${item}//${item}.png`), {
+            archive.append(fs.createReadStream(`${sourcePath}//${item}//${item}.png`), {
                 name: `High-resolution raster image (PNG)/${item}.png`
             });
-            archive.append(fs.createReadStream(`${srcPath}//${item}//${item}.svg`), {
+            archive.append(fs.createReadStream(`${sourcePath}//${item}//${item}.svg`), {
                 name: `Scalable vector graphic (SVG)/${item}.svg`
             });
         });

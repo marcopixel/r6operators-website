@@ -1,30 +1,36 @@
-import path from "path";
+/* eslint-disable unicorn/filename-case */
 import SVGO from "svgo";
 import { promises as fs } from "fs";
 
 import * as config from "../config";
 
-// optimize a single SVG file via SVGO
-export default function optimizeSVG(fileName, srcPath) {
-    // init
-    const file = path.join(srcPath + fileName + ".svg");
+export default async function optimizeSVG(sourceFile) {
+    // init SVGO
     const svgo = new SVGO(config.svgoConfig);
 
     return new Promise((resolve, reject) => {
         // read file buffer
-        fs.readFile(file, "utf-8").then(async res => {
-            svgo.optimize(res)
-                .then(
-                    async res => {
-                        // save buffer to file
-                        await fs.writeFile(file, res.data, { encoding: "utf-8" }).then(_res => resolve(_res));
-                    },
-                    async rej => {
-                        await reject(rej);
-                    }
-                )
-                // catch errors
-                .catch(err => reject(err));
-        });
+        fs.readFile(sourceFile, "utf-8")
+            // apply optimizations
+            .then(async response => {
+                return svgo.optimize(response);
+            })
+            // save buffer to file
+            .then(async response => {
+                return fs.writeFile(sourceFile, response.data, { encoding: "utf-8" });
+            })
+            // finish promise
+            .then(
+                onFulfilled => {
+                    return resolve(onFulfilled);
+                },
+                onRejected => {
+                    return reject(onRejected);
+                }
+            )
+            // catch unexpected errors
+            .catch(error => {
+                return reject(error);
+            });
     });
 }

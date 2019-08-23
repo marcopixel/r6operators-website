@@ -1,54 +1,53 @@
-import * as path from "path";
+/* eslint-disable unicorn/filename-case */
 import ora from "ora";
 import chalk from "chalk";
+import path from "path";
 
+import * as config from "./config";
 import generatePNG from "./modules/generatePNG";
 import optimizeSVG from "./modules/optimizeSVG";
 
-import * as config from "./config";
+// optimize SVG files
+export async function optimizeSVGFiles(array) {
+    return new Promise((resolve, reject) => {
+        // spinner
+        const text = chalk.bold("Optimizing SVG files");
+        const spinner = ora({ text }).start();
 
-export function optimizeSVGFiles(array) {
-    return new Promise((resolved, rejected) => {
         // counter vars
         const inputCount = array.length;
         let outputCount = 0;
 
-        // spinner
-        const text = `Optimizing SVG files`;
-        const spinner = ora(text).start();
-
-        // exit if array is empty
-        if (!Array.isArray(array) || !array.length) {
-            spinner.text = `${chalk.red(text)} - icons.json not found or corrupt!`;
+        // exit if array is empty/corrupt
+        if (!Array.isArray(array) || array.length === 0) {
+            spinner.text = `${chalk.red("ERROR")} - icons.json not found or corrupt!`;
             spinner.fail();
-            process.exit(0);
+            throw new Error("icons.json not found or corrupt!");
         }
 
-        // map the icon array and convert each icon
+        // map the icon array and apply to each icon
         const result = array.map(async item => {
-            const itemPath = path.join(config.sourcePath + path.sep + item + path.sep);
-
-            return await new Promise((resolve, reject) => {
-                optimizeSVG(item, itemPath)
+            const itemFolder = path.normalize(`${config.sourcePath}${path.sep}${item}`);
+            // eslint-disable-next-line promise/param-names
+            return new Promise((_resolve, _reject) => {
+                optimizeSVG(path.normalize(`${itemFolder}/${item}.svg`))
                     .then(
-                        // success
-                        () => {
-                            outputCount++;
+                        onfulfilled => {
+                            outputCount += 1;
                             // prettier-ignore
-                            spinner.text = text + ` - ${outputCount}/${inputCount} - ${item}`;
-                            resolve(item);
+                            spinner.text = `${chalk.yellow(text)} - ${outputCount}/${inputCount} - ${item}`;
+                            return _resolve(onfulfilled);
                         },
-                        // error
-                        rej => {
-                            outputCount++;
-                            // prettier-ignore
-                            spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${item} - Failed to optimize!`;
-                            reject(rej);
+                        onrejected => {
+                            const status = {
+                                error: onrejected,
+                                item
+                            };
+                            return _reject(status);
                         }
                     )
-                    // catch any unwanted errors
-                    .catch(err => {
-                        reject(err);
+                    .catch(error => {
+                        reject(error);
                     });
             });
         });
@@ -56,69 +55,65 @@ export function optimizeSVGFiles(array) {
         // wait for all promises to finish
         Promise.all(result)
             .then(
-                // success
-                () => {
-                    // prettier-ignore
+                success => {
                     spinner.text = `${chalk.green(text)} - ${outputCount}/${inputCount} items successfully optimized!`;
                     spinner.succeed();
-                    resolved();
+                    return resolve(success);
                 },
-                // reject
-                rej => {
+                fail => {
+                    // prettier-ignore
+                    spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${fail.item} - Failed to optimize!`;
                     spinner.fail();
-                    console.log(rej.stack);
-                    rejected();
+                    throw new Error(fail.error);
                 }
             )
-            // catch unwanted errors
-            .catch(err => {
-                console.log(err);
+            .catch(error => {
+                console.error(error);
             });
     });
 }
 
-export function generatePNGFiles(array) {
-    return new Promise((resolved, rejected) => {
+// generate PNG files
+export async function generatePNGFiles(array) {
+    return new Promise((resolve, reject) => {
+        // spinner
+        const text = chalk.bold("Generating PNG files from SVG");
+        const spinner = ora({ text }).start();
+
         // counter vars
         const inputCount = array.length;
         let outputCount = 0;
 
-        // spinner
-        const text = `Building PNG files`;
-        const spinner = ora(text).start();
-
-        // exit if array is empty
-        if (!Array.isArray(array) || !array.length) {
-            spinner.text = `${chalk.red(text)} - icons.json not found or corrupt!`;
+        // exit if array is empty/corrupt
+        if (!Array.isArray(array) || array.length === 0) {
+            spinner.text = `${chalk.red("ERROR")} - icons.json not found or corrupt!`;
             spinner.fail();
-            process.exit(0);
+            throw new Error("icons.json not found or corrupt!");
         }
 
-        // map the icon array and convert each icon
+        // map the icon array and apply to each icon
         const result = array.map(async item => {
-            const itemPath = path.join(config.sourcePath + path.sep + item + path.sep);
-
-            return await new Promise((resolve, reject) => {
-                generatePNG(item, itemPath)
+            const itemFolder = path.normalize(`${config.sourcePath}${path.sep}${item}`);
+            // eslint-disable-next-line promise/param-names
+            return new Promise((_resolve, _reject) => {
+                generatePNG(path.normalize(`${itemFolder}/${item}.svg`))
                     .then(
-                        // success
-                        () => {
-                            outputCount++;
+                        onfulfilled => {
+                            outputCount += 1;
                             // prettier-ignore
-                            spinner.text = text + ` - ${outputCount}/${inputCount} - ${item}`;
-                            resolve(item);
+                            spinner.text = `${chalk.yellow(text)} - ${outputCount}/${inputCount} - ${item}`;
+                            return _resolve(onfulfilled);
                         },
-                        // error
-                        rej => {
-                            outputCount++;
-                            // prettier-ignore
-                            spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${item} - Failed to convert!`;
-                            reject(rej);
+                        onrejected => {
+                            const status = {
+                                error: onrejected,
+                                item
+                            };
+                            return _reject(status);
                         }
                     )
-                    // catch any unwanted errors
-                    .catch(err => {
-                        reject(err);
+                    .catch(error => {
+                        reject(error);
                     });
             });
         });
@@ -126,28 +121,31 @@ export function generatePNGFiles(array) {
         // wait for all promises to finish
         Promise.all(result)
             .then(
-                // success
-                () => {
-                    // prettier-ignore
+                success => {
                     spinner.text = `${chalk.green(text)} - ${outputCount}/${inputCount} items successfully converted!`;
                     spinner.succeed();
-                    resolved();
+                    return resolve(success);
                 },
-                // reject
-                rej => {
+                fail => {
+                    // prettier-ignore
+                    spinner.text = `${chalk.red(text)} - ${outputCount}/${inputCount} - ${fail.item} - Failed to converted!`;
                     spinner.fail();
-                    console.log(rej.stack);
-                    rejected();
+                    throw new Error(fail.error);
                 }
             )
-            // catch unwanted errors
-            .catch(err => {
-                console.log(err);
+            .catch(error => {
+                console.error(error);
             });
     });
 }
 
-// execute it
-optimizeSVGFiles(config.iconArray).then(res => {
-    generatePNGFiles(config.iconArray);
-});
+// optimize svg files first
+optimizeSVGFiles(config.iconArray)
+    // then generate the png files
+    .then(() => {
+        return generatePNGFiles(config.iconArray);
+    })
+    // catch any errors
+    .catch(error => {
+        console.error(error);
+    });

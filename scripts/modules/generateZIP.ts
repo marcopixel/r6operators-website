@@ -1,24 +1,22 @@
+/* eslint-disable unicorn/filename-case */
 import fs from "fs";
+import path from "path";
 import archiver from "archiver";
 
 import * as config from "../config";
 
-// add all single icon files into a zip archive
-export default async function generateZIP(fileName, srcPath) {
+export default async function generateZIP(sourceFolder) {
     return new Promise((resolve, reject) => {
         // initialize archiver
-        const output = fs.createWriteStream(srcPath + `${fileName}.zip`);
+        const itemName = path.basename(sourceFolder);
+        const output = fs.createWriteStream(path.normalize(`${sourceFolder}/${itemName}.zip`));
         const archive = archiver("zip", {
-            zlib: { level: 9 }, // Sets the compression level.
+            zlib: { level: 9 },
             store: true
         });
         // catch errors
         output.on("error", error => {
-            if (error.code === "ENOENT") {
-                reject(error);
-            } else {
-                reject(error);
-            }
+            reject(error);
         });
 
         // resolve on finish
@@ -40,9 +38,15 @@ export default async function generateZIP(fileName, srcPath) {
         archive.pipe(output);
 
         // add files to zip
-        archive.append(fs.createReadStream(`${srcPath}/${fileName}.svg`), { name: `${fileName}.svg` });
-        archive.append(fs.createReadStream(`${srcPath}/${fileName}.png`), { name: `${fileName}.png` });
-        archive.append(fs.createReadStream(`${srcPath}/${fileName}.ai`), { name: `${fileName}.ai` });
+        archive.append(fs.createReadStream(`${sourceFolder}/${itemName}.svg`), {
+            name: `${itemName}.svg`
+        });
+        archive.append(fs.createReadStream(`${sourceFolder}/${itemName}.png`), {
+            name: `${itemName}.png`
+        });
+        archive.append(fs.createReadStream(`${sourceFolder}/${itemName}.ai`), {
+            name: `${itemName}.ai`
+        });
         archive.file(config.readmePath, { name: `readme.txt` });
         archive.file(config.licensePath, { name: `license.txt` });
 
