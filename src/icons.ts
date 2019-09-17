@@ -5,10 +5,10 @@ import iconData from "../dist/icons.json";
 type Icons = keyof typeof iconData;
 type IconObject = Record<Icons, Icon>;
 
-/*
+/**
  * Many thanks to https://github.com/feathericons/feather for inspiring the code for this function
  */
-export default Object.keys(iconData)
+const Icons = Object.keys(iconData)
     .map(item => new Icon(item, iconData[item]))
     .reduce(
         (object, icon) => {
@@ -18,3 +18,6 @@ export default Object.keys(iconData)
         },
         {} as IconObject // set type for the object created by reduce
     );
+
+
+export default Icons
