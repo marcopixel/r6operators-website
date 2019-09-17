@@ -23,6 +23,7 @@
     },
     "rules": {
         "no-console": "off",
+        "lines-between-class-members": "off",
         "unicorn/filename-case": [
             "error",
             {
@@ -31,6 +32,7 @@
         ],
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
         "no-useless-return": "off"
     }
 }

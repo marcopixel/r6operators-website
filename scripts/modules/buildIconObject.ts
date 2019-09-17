@@ -13,7 +13,15 @@ export default function buildIconsObject(array) {
 
                 // read file to get SVG content
                 fs.readFile(filePath, "utf8")
-                    .then(output => _resolve({ [name as string]: output as string })) // if successful, resolve with new array
+                    .then(output => {
+                        const object = {
+                            [name as string]: {
+                                ["contents" as string]: output,
+                                ...config.iconData[item]
+                            }
+                        };
+                        return _resolve(object);
+                    }) // if successful, resolve with new array
                     .catch(error => _reject(error)); // else reject with error
             });
         });

@@ -1,11 +1,8 @@
 {
-    "include": ["./src/**/*", "./scripts/**/*"],
+    "include": ["./src/**/*"],
     "compilerOptions": {
         "target": "esnext",
         "module": "commonjs",
-        "lib": ["dom", "es2017"],
-        // "allowJs": true,
-        // "checkJs": true,
         "jsx": "react",
         "noImplicitAny": false,
         "esModuleInterop": true,
@@ -16,11 +13,6 @@
         "skipLibCheck": true,
         "baseUrl": "./src",
         "sourceMap": true,
-        "paths": {
-            "@components/*": ["./src/components/*"],
-            "@images/*": ["./src/icons/*"],
-            "@scss/*": ["./src/scss/*"],
-            "~*": ["./node_modules/*"]
-        }
+        "declaration": true
     }
 }

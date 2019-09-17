@@ -7,6 +7,7 @@ import iconData from "../icons/icons.json";
 // paths
 const sourcePath = path.join(__dirname, `../icons/`);
 const destinationPath = path.join(__dirname, `../dist/`);
+const iconJsonPath = path.join(__dirname, `../dist/icons.json`);
 const readmePath = path.join(__dirname, `/util/readme.txt`);
 const licensePath = path.join(__dirname, `../license.txt`);
 
@@ -36,6 +37,7 @@ export {
     iconData,
     sourcePath,
     destinationPath,
+    iconJsonPath,
     readmePath,
     licensePath,
     svgArray,
