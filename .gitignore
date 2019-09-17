@@ -134,3 +134,5 @@ $RECYCLE.BIN/
 public
 dist
 .cache
+icons/*/*.png
+icons/*/*.zip
