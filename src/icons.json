@@ -234,6 +234,11 @@
         "role": "Defender",
         "unit": "SMB"
     },
+    "wamai": {
+        "displayName": "Wamai",
+        "role": "Defender",
+        "unit": "???"
+    },
     "warden": {
         "displayName": "Warden",
         "role": "Defender",
