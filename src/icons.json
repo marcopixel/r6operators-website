@@ -129,6 +129,11 @@
         "role": "Defender",
         "unit": "GIGR"
     },
+    "kali": {
+        "displayName": "Kali",
+        "role": "Attacker",
+        "unit": "???"
+    },
     "kapkan": {
         "displayName": "Kapkan",
         "role": "Defender",
