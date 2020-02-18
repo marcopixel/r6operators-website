@@ -64,6 +64,7 @@ const filters = [
             "GSUTR",
             "JAEGER CORPS",
             "JTF-2",
+            "REU",
             "SAS",
             "SASR",
             "SAT",
@@ -71,7 +72,8 @@ const filters = [
             "SEALS",
             "SECRET SERVICE",
             "SMB",
-            "SPETSNAZ"
+            "SPETSNAZ",
+            "UNAFFILIATED"
         ]
     }
 ];

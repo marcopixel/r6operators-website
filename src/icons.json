@@ -109,6 +109,11 @@
         "role": "Attacker",
         "unit": "SAT"
     },
+    "iana": {
+        "displayName": "Iana",
+        "role": "Attacker",
+        "unit": "REU"
+    },
     "iq": {
         "displayName": "IQ",
         "role": "Attacker",
@@ -188,6 +193,11 @@
         "displayName": "Nomad",
         "role": "Attacker",
         "unit": "GIGR"
+    },
+    "oryx": {
+        "displayName": "Oryx",
+        "role": "Defender",
+        "unit": "UNAFFILIATED"
     },
     "pulse": {
         "displayName": "Pulse",
