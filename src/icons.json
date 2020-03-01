@@ -137,7 +137,7 @@
     "kali": {
         "displayName": "Kali",
         "role": "Attacker",
-        "unit": "???"
+        "unit": "NIGHTHAVEN"
     },
     "kapkan": {
         "displayName": "Kapkan",
@@ -252,7 +252,7 @@
     "wamai": {
         "displayName": "Wamai",
         "role": "Defender",
-        "unit": "???"
+        "unit": "NIGHTHAVEN"
     },
     "warden": {
         "displayName": "Warden",
