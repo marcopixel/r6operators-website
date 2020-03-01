@@ -64,6 +64,7 @@ const filters = [
             "GSUTR",
             "JAEGER CORPS",
             "JTF-2",
+            "NIGHTHAVEN",
             "REU",
             "SAS",
             "SASR",
