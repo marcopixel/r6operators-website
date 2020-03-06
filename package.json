@@ -1,0 +1,39 @@
+{
+  "name": "r6operators-website",
+  "version": "1.0.0",
+  "description": "Gatsby website for the r6operators project",
+  "author": "Marco Vockner <marcopixel@live.de>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "npm lint --fix"
+  },
+  "dependencies": {
+    "gatsby": "^2.18.0",
+    "gatsby-plugin-tsconfig-paths": "^1.0.2",
+    "gatsby-plugin-typescript": "^2.1.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-unicorn": "^16.1.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
+  }
+}
