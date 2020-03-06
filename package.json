@@ -16,8 +16,10 @@
     "gatsby": "^2.18.0",
     "gatsby-plugin-tsconfig-paths": "^1.0.2",
     "gatsby-plugin-typescript": "^2.1.18",
+    "r6operators": "^1.0.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-dropdown-now": "^1.0.9"
   },
   "devDependencies": {
     "@types/node": "^13.7.7",

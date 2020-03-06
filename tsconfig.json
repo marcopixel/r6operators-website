@@ -12,7 +12,8 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "~layouts/*": ["./layouts/*"]
+      "~layouts/*": ["./layouts/*"],
+      "~components/*": ["./components/*"]
     }
   },
   "include": ["./src/**/*"]

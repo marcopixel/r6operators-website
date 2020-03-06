@@ -32,10 +32,20 @@
   "rules": {
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/camelcase": "off",
+    "import/default": "off",
     "unicorn/filename-case": [
       "error",
       {
         "case": "camelCase"
+      }
+    ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "dest": false,
+          "props": false
+        }
       }
     ]
   }
