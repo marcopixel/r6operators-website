@@ -36,12 +36,12 @@ const dropdownFilters = [
   {
     type: "group",
     name: "Role",
-    items: [...roleFilter]
+    items: [...roleFilter].sort()
   } as Group,
   {
     type: "group",
     name: "Unit",
-    items: [...unitFilter]
+    items: [...unitFilter].sort()
   } as Group
 ];
 
