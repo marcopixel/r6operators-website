@@ -1,9 +1,9 @@
 @import "~scss/variables";
 @import "~scss/colors";
+@import "~scss/mixins";
 
 .iconTile {
   padding: 0.5rem 0.5rem;
   overflow: hidden;
-  border-radius: $border-radius;
-  background: $tile-background;
+  @include tile;
 }

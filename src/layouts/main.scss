@@ -27,3 +27,7 @@ body {
   color: $text-color;
   font-family: $font-family;
 }
+
+div {
+  box-sizing: border-box;
+}

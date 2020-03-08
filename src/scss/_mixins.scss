@@ -30,3 +30,14 @@
   transition-timing-function: ease-in-out;
   transform-style: preserve-3d;
 }
+
+@mixin tile {
+  background: $tile-background;
+  border: 1px solid lighten($tile-background, 4%);
+  border-radius: $border-radius;
+  @include ease-in-out("border-radius, background", 200ms);
+
+  @include hover-focus-active {
+    border-color: rgba($text-color, 0.2);
+  }
+}

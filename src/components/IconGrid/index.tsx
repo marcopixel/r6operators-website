@@ -66,18 +66,22 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
         .toLowerCase()
         .includes(event.target.value.toString().toLowerCase())
     );
-    this.setState({ inputValue: event.target.value, items: updatedList });
+    this.setState({ inputValue: event.target.value, filter: "", items: updatedList });
   }
 
   setFilter(option: Option): void {
-    const updatedList = initialItems.filter(
-      x =>
-        x.role.toString().toLowerCase() === option.value.toString().toLowerCase() ||
-        x.unit.toString().toLowerCase() === option.value.toString().toLowerCase()
-    );
-    this.setState({ filter: option.value, items: updatedList });
+    if (option.value === "None") {
+      // set empty state when "None" is selected
+      this.setState({ inputValue: "", filter: option.value, items: initialItems });
+    } else {
+      const updatedList = initialItems.filter(
+        x =>
+          x.role.toString().toLowerCase() === option.value.toString().toLowerCase() ||
+          x.unit.toString().toLowerCase() === option.value.toString().toLowerCase()
+      );
+      this.setState({ inputValue: "", filter: option.value, items: updatedList });
+    }
   }
-
   render(): JSX.Element {
     return (
       <div className="icongrid">
@@ -98,10 +102,19 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
             placeholder="Select an option"
           />
         </div>
-        <div className="icongrid__container">
+        <div
+          className={
+            this.state.items.length === 0 ? "icongrid__container is-empty" : "icongrid__container"
+          }
+        >
           {this.state.items.map(x => (
             <IconTile key={x.id} id={x.id} />
           ))}
+          {this.state.items.length === 0 ? (
+            <div className="icongrid__empty">
+              No results found for {this.state.inputValue || this.state.filter}
+            </div>
+          ) : null}
         </div>
       </div>
     );

@@ -1,4 +1,6 @@
 import * as React from "react";
+import r6operators from "r6operators";
+import Icon from "~components/Icon";
 
 import "./icontile.scss";
 
@@ -7,6 +9,10 @@ interface IIconTileProps {
 }
 export default class IconTile extends React.Component<IIconTileProps> {
   render(): JSX.Element {
-    return <div className="iconTile">{this.props.id}</div>;
+    return (
+      <div className="iconTile">
+        <Icon id={this.props.id} {...r6operators[this.props.id].svg.attributes} />
+      </div>
+    );
   }
 }

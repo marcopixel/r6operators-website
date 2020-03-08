@@ -16,11 +16,7 @@ $dropdown-bg: #ffffff;
   padding-right: 1rem;
   height: 100%;
   overflow: hidden;
-  background: $tile-background;
-  border: 1px solid lighten($tile-background, 4%);
-  border-radius: $border-radius;
-  @include ease-in-out(all, 200ms);
-
+  @include tile;
   @include hover-focus-active {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     border-color: rgba($text-color, 0.2);

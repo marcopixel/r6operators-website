@@ -3,15 +3,27 @@
 @import "~scss/variables";
 @import "~scss/components/dropdown";
 
-$icongrid-topbar-height: 2.6rem;
+$icongrid-topbar-height: 3rem;
 
 .icongrid {
   margin: 2rem;
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+
+    @include medium {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include large {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.is-empty {
+      grid-template-columns: none;
+    }
   }
 
   &__filters {
@@ -32,15 +44,11 @@ $icongrid-topbar-height: 2.6rem;
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    background: $tile-background;
-    border: 1px solid lighten($tile-background, 4%);
-    border-radius: $border-radius;
     overflow: hidden;
     @include ease-in-out(all, 200ms);
+    @include tile;
 
     @include hover-focus-active {
-      border-color: rgba($text-color, 0.2);
-
       input::placeholder {
         color: rgba($text-color, 0.5);
       }
@@ -55,6 +63,7 @@ $icongrid-topbar-height: 2.6rem;
     input {
       position: relative;
       top: -1px;
+      width: 100%;
       height: 100%;
       background: transparent;
       outline: none;
@@ -77,6 +86,21 @@ $icongrid-topbar-height: 2.6rem;
       width: 30%;
       margin-top: 0;
       margin-left: 1rem;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    @include tile;
+
+    @include hover-focus-active {
+      border-color: lighten($tile-background, 4%);
     }
   }
 }
