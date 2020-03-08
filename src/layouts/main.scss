@@ -1,0 +1,29 @@
+@import "~scss/variables";
+@import "~scss/colors";
+@import "~scss/mixins";
+@import "../../node_modules/normalize.css/normalize.css";
+
+.app {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &__content {
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include medium {
+      max-width: $breakpoint-md;
+    }
+
+    @include large {
+      max-width: $breakpoint-lg;
+    }
+  }
+}
+
+body {
+  background: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
+}

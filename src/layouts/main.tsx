@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "./main.scss";
+
 interface IMainLayout {
   children?: React.ReactNode;
 }

@@ -1,7 +1,11 @@
 import * as React from "react";
 import r6operators from "r6operators";
+import { Search } from "react-feather";
 import { Operator } from "r6operators/src/modules/operator";
 import Dropdown, { Group, Option } from "react-dropdown-now";
+import IconTile from "~components/IconTile";
+
+import "./icongrid.scss";
 
 // interfaces
 interface IIconGridProps {
@@ -76,9 +80,10 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
 
   render(): JSX.Element {
     return (
-      <div className="iconGrid">
+      <div className="icongrid">
         <div className="icongrid__filters">
           <div className="icongrid__search">
+            <Search />
             <input
               placeholder="Search icons"
               value={this.state.inputValue}
@@ -93,9 +98,11 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
             placeholder="Select an option"
           />
         </div>
-        {this.state.items.map(x => (
-          <div key={x.id}>{x.name}</div>
-        ))}
+        <div className="icongrid__container">
+          {this.state.items.map(x => (
+            <IconTile key={x.id} id={x.id} />
+          ))}
+        </div>
       </div>
     );
   }

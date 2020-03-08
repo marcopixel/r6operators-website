@@ -1,0 +1,82 @@
+@import "~scss/colors";
+@import "~scss/mixins";
+@import "~scss/variables";
+@import "~scss/components/dropdown";
+
+$icongrid-topbar-height: 2.6rem;
+
+.icongrid {
+  margin: 2rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    @include medium {
+      flex-direction: row;
+    }
+  }
+
+  &__search {
+    display: flex;
+    height: $icongrid-topbar-height;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: $tile-background;
+    border: 1px solid lighten($tile-background, 4%);
+    border-radius: $border-radius;
+    overflow: hidden;
+    @include ease-in-out(all, 200ms);
+
+    @include hover-focus-active {
+      border-color: rgba($text-color, 0.2);
+
+      input::placeholder {
+        color: rgba($text-color, 0.5);
+      }
+    }
+
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+      margin-right: 1rem;
+    }
+
+    input {
+      position: relative;
+      top: -1px;
+      height: 100%;
+      background: transparent;
+      outline: none;
+      border: none;
+      padding: 0;
+      color: $text-color;
+
+      &::placeholder {
+        @include ease-in-out(all, 200ms);
+      }
+    }
+  }
+
+  &__dropdown {
+    width: 100%;
+    height: $icongrid-topbar-height;
+    margin-top: 0.5rem;
+
+    @include medium {
+      width: 30%;
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+}

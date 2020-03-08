@@ -14,12 +14,16 @@
   },
   "dependencies": {
     "gatsby": "^2.18.0",
+    "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-tsconfig-paths": "^1.0.2",
     "gatsby-plugin-typescript": "^2.1.18",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
     "r6operators": "^1.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-dropdown-now": "^1.0.9"
+    "react-dropdown-now": "^1.0.9",
+    "react-feather": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^13.7.7",
@@ -27,6 +31,7 @@
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-typescript": "^2.0.0",

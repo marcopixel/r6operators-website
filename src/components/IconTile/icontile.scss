@@ -1,0 +1,9 @@
+@import "~scss/variables";
+@import "~scss/colors";
+
+.iconTile {
+  padding: 0.5rem 0.5rem;
+  overflow: hidden;
+  border-radius: $border-radius;
+  background: $tile-background;
+}
