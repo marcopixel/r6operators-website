@@ -120,7 +120,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
           }
         >
           {this.state.items.map(x => (
-            <IconTile key={x.id} icon={ICONS[x.id]} />
+            <IconTile key={x.id} object={x} icon={ICONS[x.id]} />
           ))}
           {this.state.items.length === 0 ? (
             <div className="icongrid__empty">

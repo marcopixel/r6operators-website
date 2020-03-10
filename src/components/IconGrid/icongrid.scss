@@ -12,6 +12,8 @@ $icongrid-topbar-height: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    min-height: 0;
+    min-width: 0;
 
     @include medium {
       grid-template-columns: repeat(4, 1fr);

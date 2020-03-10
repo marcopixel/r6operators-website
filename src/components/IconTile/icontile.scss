@@ -3,7 +3,73 @@
 @import "~scss/mixins";
 
 .iconTile {
-  padding: 0.5rem 0.5rem;
+  position: relative;
   overflow: hidden;
+  min-width: 0;
+  padding-bottom: 2rem;
   @include tile;
+
+  @include hover-focus-active {
+    @include boxshadow;
+
+    .iconTile__content {
+      transform: translateY(0rem);
+      background: rgba($tile-background-hover, 1);
+
+      &--wrap {
+        padding-top: 0.5rem;
+      }
+    }
+    .iconTile__name {
+      color: black;
+    }
+    .iconTile__slideOut {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .iconTile__download {
+      opacity: 1;
+      display: flex;
+      margin-top: 0.25rem;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    background: rgba($tile-background-hover, 0);
+    width: 100%;
+    transform: translateY(2rem);
+    @include ease-in-out(all, 100ms);
+
+    &--wrap {
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include ease-in-out(all, 100ms);
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-align: center;
+    height: 3rem;
+  }
+
+  &__download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    a {
+      font-weight: 600;
+      font-size: 0.9em;
+      color: lighten($bg-color, 20%);
+    }
+  }
 }
