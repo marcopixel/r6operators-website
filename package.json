@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "lint": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx",
-    "lint:fix": "npm lint --fix"
+    "lint:fix": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "dependencies": {
     "gatsby": "^2.18.0",
