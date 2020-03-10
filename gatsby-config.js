@@ -11,6 +11,12 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tsconfig-paths`,
     {
+      resolve: `gatsby-plugin-svg-sprite-loader`,
+      options: {
+        extract: false
+      }
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src/scss"],

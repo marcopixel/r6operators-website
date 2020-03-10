@@ -1,9 +1,11 @@
 import * as React from "react";
+import path from "path";
 import r6operators from "r6operators";
 import { Search } from "react-feather";
 import { Operator } from "r6operators/src/modules/operator";
 import Dropdown, { Group, Option } from "react-dropdown-now";
 import IconTile from "~components/IconTile";
+import { IIcon } from "~components/Icon";
 
 import "./icongrid.scss";
 
@@ -15,6 +17,9 @@ interface IIconGridState {
   inputValue: string;
   items: Array<Operator>;
   filter: string;
+}
+interface IICONSMap {
+  [name: string]: IIcon;
 }
 
 // convert object to Array<Operator>
@@ -44,6 +49,13 @@ const dropdownFilters = [
     items: [...unitFilter].sort()
   } as Group
 ];
+
+// create GLYPHS object for svg sprite loader
+const requestIcons = require.context("r6operators/lib/icons/svg", true, /\.svg$/);
+const ICONS: IICONSMap = requestIcons.keys().reduce((glyphs, key) => {
+  const filename = path.basename(key, ".svg");
+  return { ...glyphs, [filename]: requestIcons(key).default };
+}, {});
 
 export default class IconGrid extends React.Component<IIconGridProps, IIconGridState> {
   constructor(props: IIconGridProps) {
@@ -108,7 +120,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
           }
         >
           {this.state.items.map(x => (
-            <IconTile key={x.id} id={x.id} />
+            <IconTile key={x.id} icon={ICONS[x.id]} />
           ))}
           {this.state.items.length === 0 ? (
             <div className="icongrid__empty">
