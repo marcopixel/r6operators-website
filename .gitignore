@@ -130,3 +130,7 @@ $RECYCLE.BIN/
 ### Gatsby ###
 public
 .cache
+
+### r6operators-website ###
+static/icons
+static/*.zip

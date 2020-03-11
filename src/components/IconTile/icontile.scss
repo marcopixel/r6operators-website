@@ -69,7 +69,13 @@
     a {
       font-weight: 600;
       font-size: 0.9em;
+      text-decoration: none;
       color: lighten($bg-color, 20%);
+      @include ease-in-out(color, 200ms);
+
+      @include hover-focus-active {
+        color: darken($bg-color, 20%);
+      }
     }
   }
 }
