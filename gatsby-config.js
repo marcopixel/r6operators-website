@@ -10,17 +10,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tsconfig-paths`,
-    {
-      resolve: `gatsby-plugin-svg-sprite-loader`,
-      options: {
-        extract: false
-      }
-    },
+    "gatsby-plugin-svg-sprite",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src/scss"],
-        postCssPlugins: [cssnano({ preset: "default" })]
+        postCssPlugins: [cssnano({ preset: "default" })],
+        precision: 5
       }
     }
   ]

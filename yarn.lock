@@ -4868,12 +4868,12 @@ gatsby-plugin-sass@^2.1.30:
     "@babel/runtime" "^7.7.6"
     sass-loader "^7.3.1"
 
-gatsby-plugin-svg-sprite-loader@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-svg-sprite-loader/-/gatsby-plugin-svg-sprite-loader-0.1.1.tgz#8b339592422d0694624531a12278f2a496a84848"
-  integrity sha512-iEi1DGqI8p2IZoqq0hag964Cuo6wwqwzq3yv4Chuhyrc+G7iOroVwsm8eQMnuUc8eiV0sImPrVBhcmRGHuVp2A==
+gatsby-plugin-svg-sprite@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-svg-sprite/-/gatsby-plugin-svg-sprite-2.0.1.tgz#533c338788a70f9882333ef540df53b92bda0d4b"
+  integrity sha512-HOioTgkKZpOkWoIK2WTXi4IEOjgs3M4K2kiIpNv0BXHAmqMpOZrbx2coWffUvjNmEnZFDK7ALkiICPrgNtV4Rg==
   dependencies:
-    svg-sprite-loader "^4.1.6"
+    svg-sprite-loader "^4.1.3"
 
 gatsby-plugin-tsconfig-paths@^1.0.2:
   version "1.0.2"
@@ -10550,7 +10550,7 @@ svg-baker@^1.5.0:
     query-string "^4.3.2"
     traverse "^0.6.6"
 
-svg-sprite-loader@^4.1.6:
+svg-sprite-loader@^4.1.3:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.2.1.tgz#38a0bb9af9beecd037a0e417af56edf670fe7283"
   integrity sha512-IQCJEHWD+CNP8yFptR2SkscLXBgwYwY+34VMNSLBE4RQmJ0dgpAfkF6q8ktgNsXlMhlX6cAM4Zw0t7SnLyyiQA==
