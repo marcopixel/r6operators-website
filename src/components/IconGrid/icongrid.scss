@@ -99,7 +99,9 @@ $icongrid-topbar-height: 3rem;
     padding: 2rem;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 1.25em;
+    overflow: hidden;
     @include tile;
 
     @include hover-focus-active {
