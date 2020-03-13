@@ -2,3 +2,39 @@ $bg-color: #383f49;
 $text-color: #f9f9f9;
 $tile-background: lighten($bg-color, 3%);
 $tile-background-hover: #ffffff;
+
+$gradient-step-1: #ee7752;
+$gradient-step-2: #e73c7e;
+$gradient-step-3: #23a6d5;
+$gradient-step-4: #23d5ab;
+
+@keyframes gradientAnimation {
+  0% {
+    color: $gradient-step-2;
+    border-color: $gradient-step-2;
+  }
+  20% {
+    color: $gradient-step-3;
+    border-color: $gradient-step-3;
+  }
+  35% {
+    color: $gradient-step-4;
+    border-color: $gradient-step-4;
+  }
+  50% {
+    color: $gradient-step-3;
+    border-color: $gradient-step-3;
+  }
+  65% {
+    color: $gradient-step-2;
+    border-color: $gradient-step-2;
+  }
+  80% {
+    color: $gradient-step-1;
+    border-color: $gradient-step-1;
+  }
+  100% {
+    color: $gradient-step-2;
+    border-color: $gradient-step-2;
+  }
+}

@@ -1,0 +1,135 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+@import "~scss/colors";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 0.5rem;
+
+  #logo {
+    --color-stop-1: #{$gradient-step-1};
+    --color-stop-2: #{$gradient-step-2};
+    --color-stop-3: #{$gradient-step-3};
+    --color-stop-4: #{$gradient-step-4};
+  }
+
+  &__logo {
+    width: 8rem;
+    margin-top: 1.5rem;
+
+    @include medium {
+      width: 12rem;
+      margin-top: 2.5rem;
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.025em;
+  }
+  &__subtitle {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: rgba($text-color, 0.5);
+  }
+  &__github {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      margin: 0.2rem;
+    }
+  }
+
+  &__usage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+
+    @include medium {
+      flex-direction: row;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    div {
+      margin: 1rem 0;
+
+      @include medium {
+        margin: 0 1rem;
+      }
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: rgba($text-color, 0.6);
+
+      .divider {
+        margin: 0 0.75rem;
+        opacity: 0.5;
+      }
+    }
+
+    &--npm {
+      pre {
+        margin: 0;
+        padding: 0.5em 1.5em;
+        font-size: 1.1em;
+        border: 2px solid darken($bg-color, 5%);
+        background: darken($bg-color, 5%);
+        border-radius: $border-radius;
+        @include ease-in-out(all, 200ms);
+
+        @include hover-focus-active {
+          border-color: lighten($bg-color, 5%);
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        @include hover-focus-active {
+          color: rgba($text-color, 1);
+        }
+      }
+    }
+
+    &--download {
+      .button {
+        display: flex;
+        margin: 0;
+        padding: 0.5em 1.5em;
+        border: 2px solid $text-color;
+        border-radius: $border-radius;
+        font-weight: 600;
+        font-size: 1.1em;
+        letter-spacing: 0.025em;
+        animation: gradientAnimation 15s linear infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        text-decoration: none;
+        @include ease-in-out(all, 200ms);
+
+        @include hover-focus-active {
+          transform: perspective(1px) scale(1.05);
+        }
+      }
+    }
+  }
+}
