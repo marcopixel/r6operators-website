@@ -10,8 +10,6 @@
   @include tile;
 
   @include hover-focus-active {
-    @include boxshadow;
-
     .iconTile__content {
       transform: translateY(0rem);
       background: rgba($tile-background-hover, 1);
