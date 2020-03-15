@@ -7,8 +7,10 @@
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "run-s build:assets build:gatsby -n",
+    "build:gatsby": "gatsby build",
     "build:assets": "ts-node ./scripts/buildStaticAssets.ts",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "lint": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx --fix",
     "type-check": "tsc --noEmit"
@@ -47,6 +49,8 @@
     "eslint-plugin-unicorn": "^16.1.1",
     "fs-extra": "^8.1.0",
     "gatsby-plugin-svg-sprite": "^2.0.1",
+    "gh-pages": "^2.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.2"
