@@ -8,12 +8,12 @@
   align-items: center;
   text-align: center;
   margin: 0 2rem;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   color: rgba($text-color, 0.5);
   border-top: 1px solid rgba($text-color, 0.05);
 
   @include medium {
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
   }
 
   a {
