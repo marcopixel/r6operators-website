@@ -1,0 +1,38 @@
+@import "~scss/variables";
+@import "~scss/mixins";
+@import "~scss/colors";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 2rem;
+  padding: 3rem 1rem;
+  color: rgba($text-color, 0.5);
+  border-top: 1px solid rgba($text-color, 0.05);
+
+  @include medium {
+    padding: 3rem 5rem;
+  }
+
+  a {
+    color: rgba($text-color, 0.7);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include hover-focus-active {
+      color: rgba($text-color, 0.9);
+    }
+  }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+    opacity: 0.5;
+  }
+}
