@@ -10,7 +10,7 @@
     "build": "run-s build:assets build:gatsby -n",
     "build:gatsby": "gatsby build",
     "build:assets": "ts-node ./scripts/buildStaticAssets.ts",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "run-s build:assets build:gatsby -n && gh-pages -d public",
     "lint": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint --ignore-path .gitignore . --ext .ts,.tsx,.js,.jsx --fix",
     "type-check": "tsc --noEmit"
