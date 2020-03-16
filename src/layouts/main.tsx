@@ -32,7 +32,7 @@ export default class MainLayout extends React.Component<IMainLayout> {
             <Helmet>
               <html lang="en" />
               <meta charSet="utf-8" />
-              <title>{data.site.siteMetadata.title} - </title>
+              <title>{data.site.siteMetadata.title}</title>
 
               <meta name="description" content={data.site.siteMetadata.description} />
               <meta name="robots" content="index, follow" />
