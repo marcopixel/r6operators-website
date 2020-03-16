@@ -1,11 +1,10 @@
-name: Deploy on Github Pages
+name: Deploy
 on:
   push:
     branches:
       - master
 jobs:
   deploy:
-    name: Publish to NPM
     runs-on: ubuntu-latest
     strategy:
       matrix:
