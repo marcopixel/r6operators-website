@@ -1,6 +1,6 @@
 # r6operators-website
 
-This repo contains the website for the [r6operators](<[https://github.com/marcopixel/r6operators](https://github.com/marcopixel/r6operators)>) project.
+This repo contains the website for the [r6operators](https://github.com/marcopixel/r6operators) project.
 To visit the actual website, go to [marcopixel.eu/r6operators](http://marcopixel.eu/r6operators)
 
 This website is built on [Gatsby](gatsbyjs.org/).
