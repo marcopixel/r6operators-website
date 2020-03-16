@@ -26,7 +26,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-dropdown-now": "^1.0.9",
-    "react-feather": "^2.0.3"
+    "react-feather": "^2.0.3",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "@types/archiver": "^3.1.0",
@@ -34,6 +35,7 @@
     "@types/node": "^13.7.7",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/react-helmet": "^5.0.15",
     "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",

@@ -4,9 +4,15 @@ const cssnano = require("cssnano");
 
 module.exports = {
   siteMetadata: {
-    siteName: `Using TypeScript Example`,
-    exampleUrl: `https://github.com/gatsbyjs/gatsby/tree/master/examples/using-typescript`
+    siteName: `r6operators`,
+    siteUrl: `https://marcopixel.eu/r6operators/`,
+    title: `r6operators - Rainbow Six: Siege operator icons`,
+    description: `r6operators is a collection of high-quality vectorized Rainbow Six: Siege Operator icons & metadata for Node.js`,
+    keywords: `rainbow six siege, rainbow6, ubisoft, operator, icons, node`,
+    author: `Marco Vockner <marcopixel@live.de>`,
+    authorTwitter: `@marcopixel`
   },
+  pathPrefix: "/r6operators",
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tsconfig-paths`,
