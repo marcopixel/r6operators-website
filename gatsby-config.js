@@ -10,7 +10,7 @@ module.exports = {
     description: `r6operators is a collection of high-quality vectorized Rainbow Six: Siege Operator icons & metadata for Node.js`,
     keywords: `rainbow six siege, rainbow6, ubisoft, operator, icons, node`,
     author: `Marco Vockner <marcopixel@live.de>`,
-    authorTwitter: `@marcopixel`
+    authorTwitter: `@marcopixel`,
   },
   pathPrefix: "/r6operators",
   plugins: [
@@ -22,8 +22,8 @@ module.exports = {
       options: {
         includePaths: ["src/scss"],
         postCssPlugins: [cssnano({ preset: "default" })],
-        precision: 5
-      }
-    }
-  ]
+        precision: 5,
+      },
+    },
+  ],
 };

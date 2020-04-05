@@ -18,20 +18,20 @@ export default async function generatePng(iconObject: {}): Promise<void> {
   const outputPath = path.resolve(iconsPath, "./zip/");
 
   // map the icon object
-  const result = Object.keys(iconObject).map(async op => {
+  const result = Object.keys(iconObject).map(async (op) => {
     // check if folder exists and create if not
-    fs.ensureDir(outputPath).catch(error => {
+    fs.ensureDir(outputPath).catch((error) => {
       throw error;
     });
 
     // init archiver
     const output = fs.createWriteStream(outputPath + `/${op}.zip`);
     const archive = archiver("zip", {
-      zlib: { level: 9 } // Sets the compression level.
+      zlib: { level: 9 }, // Sets the compression level.
     });
 
     // catch errors
-    output.on("error", error => {
+    output.on("error", (error) => {
       if (error.code === "ENOENT") {
         throw error;
       } else {
@@ -45,7 +45,7 @@ export default async function generatePng(iconObject: {}): Promise<void> {
     });
 
     // catch warnings (ie stat failures and other non-blocking errors)
-    archive.on("warning", error => {
+    archive.on("warning", (error) => {
       throw error;
     });
 
@@ -54,10 +54,10 @@ export default async function generatePng(iconObject: {}): Promise<void> {
 
     // add files to zip
     archive.append(fs.createReadStream(`${iconsPath}/svg/${op}.svg`), {
-      name: `${op}.svg`
+      name: `${op}.svg`,
     });
     archive.append(fs.createReadStream(`${iconsPath}/png/${op}.png`), {
-      name: `${op}.png`
+      name: `${op}.png`,
     });
     archive.file(path.join(__dirname, `../util/readme.txt`), { name: `readme.txt` });
     archive.file(path.join(__dirname, `../../LICENSE`), { name: `license.txt` });
@@ -75,13 +75,13 @@ export default async function generatePng(iconObject: {}): Promise<void> {
 
   // wait for all promises to finish
   await Promise.all(result)
-    .then(resolved => {
+    .then((resolved) => {
       console.info("\nFinished!");
       console.info(`Execution time: ${process.hrtime(startTimer)[0]} seconds`);
       console.log(`Output folder: ${iconsPath}\n`);
       return resolved;
     })
-    .catch(error => {
+    .catch((error) => {
       throw error;
     });
 }

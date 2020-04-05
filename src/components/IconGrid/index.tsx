@@ -41,13 +41,13 @@ const dropdownFilters = [
   {
     type: "group",
     name: "Role",
-    items: [...roleFilter].sort()
+    items: [...roleFilter].sort(),
   } as Group,
   {
     type: "group",
     name: "Unit",
-    items: [...unitFilter].sort()
-  } as Group
+    items: [...unitFilter].sort(),
+  } as Group,
 ];
 
 // create GLYPHS object for svg sprite loader
@@ -64,7 +64,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
     this.state = {
       inputValue: "",
       items: initialItems,
-      filter: ""
+      filter: "",
     };
     // bind functions
     this.updateInputValue = this.updateInputValue.bind(this);
@@ -72,11 +72,8 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
   }
 
   updateInputValue(event: React.ChangeEvent<HTMLInputElement>): void {
-    const updatedList = initialItems.filter(x =>
-      x.name
-        .toString()
-        .toLowerCase()
-        .includes(event.target.value.toString().toLowerCase())
+    const updatedList = initialItems.filter((x) =>
+      x.name.toString().toLowerCase().includes(event.target.value.toString().toLowerCase())
     );
     this.setState({ inputValue: event.target.value, filter: "", items: updatedList });
   }
@@ -87,7 +84,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
       this.setState({ inputValue: "", filter: option.value, items: initialItems });
     } else {
       const updatedList = initialItems.filter(
-        x =>
+        (x) =>
           x.role.toString().toLowerCase() === option.value.toString().toLowerCase() ||
           x.unit.toString().toLowerCase() === option.value.toString().toLowerCase()
       );
@@ -119,7 +116,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
             this.state.items.length === 0 ? "icongrid__container is-empty" : "icongrid__container"
           }
         >
-          {this.state.items.map(x => (
+          {this.state.items.map((x) => (
             <IconTile key={x.id} object={x} icon={ICONS[x.id]} />
           ))}
           {this.state.items.length === 0 ? (

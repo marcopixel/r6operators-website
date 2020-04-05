@@ -18,18 +18,18 @@ export default async function generatePackage(): Promise<void> {
   const outputFile = path.resolve(__dirname, `../../static/${filename}`);
 
   // check if folder exists and create if not
-  fs.ensureDir(path.dirname(outputFile)).catch(error => {
+  fs.ensureDir(path.dirname(outputFile)).catch((error) => {
     throw error;
   });
 
   // init archiver
   const output = fs.createWriteStream(outputFile);
   const archive = archiver("zip", {
-    zlib: { level: 9 } // Sets the compression level.
+    zlib: { level: 9 }, // Sets the compression level.
   });
 
   // catch errors
-  output.on("error", error => {
+  output.on("error", (error) => {
     if (error.code === "ENOENT") {
       throw error;
     } else {
@@ -43,7 +43,7 @@ export default async function generatePackage(): Promise<void> {
   });
 
   // catch warnings (ie stat failures and other non-blocking errors)
-  archive.on("warning", error => {
+  archive.on("warning", (error) => {
     throw error;
   });
 

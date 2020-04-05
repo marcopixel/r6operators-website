@@ -27,7 +27,7 @@ export default class MainLayout extends React.Component<IMainLayout> {
           }
         `}
         // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-        render={data => (
+        render={(data) => (
           <div className="app">
             <Helmet>
               <html lang="en" />

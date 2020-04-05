@@ -15,7 +15,7 @@ async function main(): Promise<void> {
   console.log("Copying assets to static folder...");
 
   // check if folder exists and create if not
-  await fs.ensureDir(OUTPUT_DIR).catch(error => {
+  await fs.ensureDir(OUTPUT_DIR).catch((error) => {
     throw error;
   });
 
@@ -27,7 +27,7 @@ async function main(): Promise<void> {
   await generatePackage();
 }
 
-main().catch(error => {
+main().catch((error) => {
   console.log(error);
   process.exit(1);
 });
