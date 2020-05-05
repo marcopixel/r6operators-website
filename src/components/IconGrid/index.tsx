@@ -39,14 +39,16 @@ for (const op of initialItems) {
 const dropdownFilters = [
   "None",
   {
-    type: "group",
     name: "Role",
-    items: [...roleFilter].sort(),
+    items: [...roleFilter].sort().map((x) => {
+      return { value: x, label: x };
+    }),
   } as Group,
   {
-    type: "group",
     name: "Unit",
-    items: [...unitFilter].sort(),
+    items: [...unitFilter].sort().map((x) => {
+      return { value: x, label: x };
+    }),
   } as Group,
 ];
 
@@ -123,7 +125,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
             <div className="icongrid__empty">
               No results found for {this.state.inputValue || this.state.filter}
             </div>
-          ) : null}
+          ) : undefined}
         </div>
       </div>
     );
