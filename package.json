@@ -22,12 +22,12 @@
     "gatsby-plugin-typescript": "^2.3.1",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
-    "r6operators": "^1.0.1",
+    "r6operators": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-dropdown-now": "^1.0.9",
+    "react-dropdown-now": "^3.0.0",
     "react-feather": "^2.0.3",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "@types/archiver": "^3.1.0",
@@ -39,7 +39,7 @@
     "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "archiver": "^3.1.1",
+    "archiver": "^4.0.1",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
@@ -48,7 +48,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-unicorn": "^18.0.1",
+    "eslint-plugin-unicorn": "^19.0.1",
     "fs-extra": "^9.0.0",
     "gatsby-plugin-svg-sprite": "^2.0.1",
     "gh-pages": "^2.2.0",
