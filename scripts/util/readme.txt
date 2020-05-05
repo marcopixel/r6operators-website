@@ -19,6 +19,6 @@ Tom Clancy’s, Rainbow Six, The Soldier Icon, Ubisoft and the Ubisoft logo are 
 
 Website
 -------
-For more information about this project, please visit http://marcopixel.eu/r6operators/.
+For more information about this project, please visit https://r6operators.marcopixel.eu
 
 Github: https://github.com/marcopixel/r6operators
