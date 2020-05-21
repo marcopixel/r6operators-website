@@ -9967,10 +9967,10 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-r6operators@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/r6operators/-/r6operators-1.1.0.tgz#3c8e485a59e046f6267d4ef18b372e98644733a9"
-  integrity sha512-cXkFLncyW6UuocpqYiZ+f/Sm46Ck3AQZH5riovh+66lqkAx1+IuRVcDD11jdCWSufUsH093SIL0tGnf+GKpijQ==
+r6operators@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/r6operators/-/r6operators-1.1.1.tgz#5359c4fc04fcc5482f34218dcf8f709974f8db8b"
+  integrity sha512-AQYLUDdI3wKQv37GYWqYqpU2mXdsrr7Lw6LT/0W3iOttmfOe8hqDuI89flVpMMgGTMw8Fj+unXpuMqVZMgypDw==
   dependencies:
     cheerio "^1.0.0-rc.3"
     classnames "^2.2.6"

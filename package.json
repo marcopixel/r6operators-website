@@ -22,7 +22,7 @@
     "gatsby-plugin-typescript": "^2.3.1",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
-    "r6operators": "^1.1.0",
+    "r6operators": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dropdown-now": "^3.0.0",
