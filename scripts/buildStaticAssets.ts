@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable unicorn/no-process-exit */
 // @ts-nocheck
 import * as fs from "fs-extra";

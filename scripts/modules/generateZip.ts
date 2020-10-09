@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-named-as-default-member */
 // @ts-nocheck
 import path from "path";
 import archiver from "archiver";
 import fs from "fs-extra";
 
-export default async function generatePng(iconObject: {}): Promise<void> {
+export default async function generatePng(iconObject: Record<string, unknown>): Promise<void> {
   // inform user that script has started
   console.log("Generate ZIP files...\n");
 

@@ -54,6 +54,7 @@ const dropdownFilters = [
 
 // create GLYPHS object for svg sprite loader
 const requestIcons = require.context("r6operators/lib/icons/svg", true, /\.svg$/);
+// eslint-disable-next-line unicorn/no-reduce
 const ICONS: IICONSMap = requestIcons.keys().reduce((glyphs, key) => {
   const filename = path.basename(key, ".svg");
   return { ...glyphs, [filename]: requestIcons(key).default };
