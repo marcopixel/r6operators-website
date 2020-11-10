@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "gatsby": "^2.24.73",
-    "gatsby-plugin-sass": "^2.3.22",
+    "gatsby-plugin-sass": "2.3.22",
     "gatsby-plugin-tsconfig-paths": "^1.0.2",
     "gatsby-plugin-typescript": "^2.4.21",
     "node-sass": "^4.14.1",
