@@ -3,15 +3,14 @@ import pkg from "r6operators/package.json";
 import { withPrefix } from "gatsby";
 import "./header.scss";
 import LOGO from "./logo.svg";
+import SVG from "react-inlinesvg";
 
 export default class Header extends React.Component {
   render(): JSX.Element {
     return (
       <div className="header">
         <div className="header__logo">
-          <svg id="#logo" viewBox={LOGO.viewBox} width={LOGO.width} height={LOGO.height}>
-            <use xlinkHref={`#${LOGO.id}`} />
-          </svg>
+          <SVG id="#logo" src={LOGO}></SVG>
         </div>
         <h1 className="header__title">r6operators</h1>
         <div className="header__subtitle">
