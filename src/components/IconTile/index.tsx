@@ -1,14 +1,13 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import * as React from "react";
-import { withPrefix } from "gatsby-link";
 import Icon, { IIcon } from "~components/Icon";
-import { Operator } from "r6operators/src/modules/operator";
+import { withPrefix } from "gatsby";
 
 import "./icontile.scss";
 
 interface IIconTileProps {
   icon: IIcon;
-  object: Operator;
+  object: any;
 }
 
 // function to create link element
@@ -28,7 +27,7 @@ export default class IconTile extends React.Component<IIconTileProps> {
   render(): JSX.Element {
     return (
       <div className={`iconTile ${this.props.object.name}`}>
-        <Icon glyph={this.props.icon} />
+        <Icon id={this.props.object.id} />
         <div className="iconTile__content">
           <div className="iconTile__content--wrap">
             <div className="iconTile__name">

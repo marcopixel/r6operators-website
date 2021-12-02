@@ -1,5 +1,6 @@
 import * as React from "react";
-
+import r6operators from "r6operators";
+import SVG from "react-inlinesvg";
 export interface IIcon {
   content: string;
   viewBox: string;
@@ -7,15 +8,10 @@ export interface IIcon {
   node: SVGSymbolElement;
 }
 interface IIconProps {
-  glyph: IIcon;
+  id: string;
 }
-
 export default class Icon extends React.PureComponent<IIconProps> {
   render(): JSX.Element {
-    return (
-      <svg className={`icon ${this.props.glyph.id}`} viewBox={this.props.glyph.viewBox}>
-        <use xlinkHref={`#${this.props.glyph.id}`} />
-      </svg>
-    );
+    return <SVG src={r6operators[this.props.id].toSVG()}></SVG>;
   }
 }

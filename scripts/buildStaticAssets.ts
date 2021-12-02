@@ -6,8 +6,9 @@ import path from "path";
 import ops from "r6operators";
 
 const OUTPUT_DIR = path.resolve(__dirname, "../static/");
-const INPUT_DIR = path.resolve(__dirname, "../node_modules/r6operators/lib/icons");
+const INPUT_DIR = path.resolve(__dirname, "../node_modules/r6operators/dist/icons");
 
+import generatePng from "./modules/generatePng";
 import generateZip from "./modules/generateZip";
 import generatePackage from "./modules/generatePackage";
 
@@ -21,9 +22,10 @@ async function main(): Promise<void> {
   });
 
   // copy svg & png icons from module
-  await fs.copySync(INPUT_DIR, path.resolve(OUTPUT_DIR, "./icons"));
+  await fs.copySync(INPUT_DIR, path.resolve(OUTPUT_DIR, "./icons/svg"));
 
   // generate zip files
+  await generatePng(ops);
   await generateZip(ops);
   await generatePackage();
 }

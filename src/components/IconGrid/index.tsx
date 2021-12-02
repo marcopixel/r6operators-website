@@ -2,8 +2,7 @@ import * as React from "react";
 import path from "path";
 import r6operators from "r6operators";
 import { Search } from "react-feather";
-import { Operator } from "r6operators/src/modules/operator";
-import Dropdown, { Group, Option } from "react-dropdown-now";
+import Dropdown from "react-dropdown-now";
 import IconTile from "~components/IconTile";
 import { IIcon } from "~components/Icon";
 
@@ -15,7 +14,7 @@ interface IIconGridProps {
 }
 interface IIconGridState {
   inputValue: string;
-  items: Array<Operator>;
+  items: Array<any>;
   filter: string;
 }
 interface IICONSMap {
@@ -23,7 +22,7 @@ interface IICONSMap {
 }
 
 // convert object to Array<Operator>
-const initialItems: Array<Operator> = Object.values(r6operators);
+const initialItems: Array<any> = Object.values(r6operators);
 
 // use sets for filtering
 const roleFilter = new Set();
@@ -43,22 +42,22 @@ const dropdownFilters = [
     items: [...roleFilter].sort().map((x) => {
       return { value: x, label: x };
     }),
-  } as Group,
+  },
   {
     name: "Unit",
     items: [...unitFilter].sort().map((x) => {
       return { value: x, label: x };
     }),
-  } as Group,
-];
+  },
+] as any;
 
 // create GLYPHS object for svg sprite loader
-const requestIcons = require.context("r6operators/lib/icons/svg", true, /\.svg$/);
+const requestIcons = require.context("r6operators/dist/icons", true, /\.svg$/);
 // eslint-disable-next-line unicorn/no-reduce
-const ICONS: IICONSMap = requestIcons.keys().reduce((glyphs, key) => {
-  const filename = path.basename(key, ".svg");
-  return { ...glyphs, [filename]: requestIcons(key).default };
-}, {});
+// const ICONS: IICONSMap = requestIcons.keys().reduce((glyphs, key) => {
+//   const filename = path.basename(key, ".svg");
+//   return { ...glyphs, [filename]: requestIcons(key).default };
+// }, {});
 
 export default class IconGrid extends React.Component<IIconGridProps, IIconGridState> {
   constructor(props: IIconGridProps) {
@@ -81,7 +80,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
     this.setState({ inputValue: event.target.value, filter: "", items: updatedList });
   }
 
-  setFilter(option: Option): void {
+  setFilter(option: any): void {
     if (option.value === "None") {
       // set empty state when "None" is selected
       this.setState({ inputValue: "", filter: option.value, items: initialItems });
@@ -120,7 +119,7 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
           }
         >
           {this.state.items.map((x) => (
-            <IconTile key={x.id} object={x} icon={ICONS[x.id]} />
+            <IconTile key={x.id} object={x} icon={x.id} />
           ))}
           {this.state.items.length === 0 ? (
             <div className="icongrid__empty">

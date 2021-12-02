@@ -1,7 +1,6 @@
 import * as React from "react";
-import { withPrefix } from "gatsby-link";
-import { version } from "r6operators/package.json";
-
+import pkg from "r6operators/package.json";
+import { withPrefix } from "gatsby";
 import "./header.scss";
 import LOGO from "./logo.svg";
 
@@ -50,7 +49,7 @@ export default class Header extends React.Component {
             </span>
           </div>
           <div className="header__usage--download">
-            <a className="button" href={withPrefix(`/r6operators-icons-${version}.zip`)}>
+            <a className="button" href={withPrefix(`/r6operators-icons-${pkg.version}.zip`)}>
               Download
             </a>
             <span>SVG & PNG</span>
