@@ -35,7 +35,7 @@
     "react-helmet": "^6.1.0",
     "react-inlinesvg": "^2.3.0",
     "sass": "^1.44.0",
-    "sharp": "^0.29.3"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "@loadable/babel-plugin": "^5.13.2",
