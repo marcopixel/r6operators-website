@@ -1,12 +1,11 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import * as React from "react";
-import Icon, { IIcon } from "~components/Icon";
+import Icon from "~components/Icon";
 import { withPrefix } from "gatsby";
 
 import "./icontile.scss";
 
 interface IIconTileProps {
-  icon: IIcon;
   object: any;
 }
 

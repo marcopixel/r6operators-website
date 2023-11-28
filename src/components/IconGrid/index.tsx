@@ -1,8 +1,7 @@
 import * as React from "react";
-import path from "path";
-import r6operators from "r6operators";
+import r6operators, { Operator } from "r6operators";
 import { Search } from "react-feather";
-import Dropdown from "react-dropdown-now";
+import Dropdown, { Option as DropdownOption } from "react-dropdown-now";
 import IconTile from "~components/IconTile";
 import { IIcon } from "~components/Icon";
 
@@ -16,22 +15,23 @@ interface IIconGridState {
   inputValue: string;
   items: Array<any>;
   filter: string;
+  sorter: string;
 }
 interface IICONSMap {
   [name: string]: IIcon;
 }
 
 // convert object to Array<Operator>
-const initialItems: Array<any> = Object.values(r6operators);
+const initialItems: Array<Operator> = Object.values(r6operators);
 
 // use sets for filtering
 const roleFilter = new Set();
-const unitFilter = new Set();
+const orgFilter = new Set();
 
 // iterate over initialItems to get roles and add them to the sets
 for (const op of initialItems) {
   roleFilter.add(op.role);
-  unitFilter.add(op.unit);
+  orgFilter.add(op.org);
 }
 
 // create filter object for dropdown
@@ -44,12 +44,44 @@ const dropdownFilters = [
     }),
   },
   {
-    name: "Unit",
-    items: [...unitFilter].sort().map((x) => {
+    name: "Org",
+    items: [...orgFilter].sort().map((x) => {
       return { value: x, label: x };
     }),
   },
 ] as any;
+
+const sortDropDownFilters = ["Default", "A-Z", "Z-A", "Newest", "Oldest"];
+
+const getSeasonId = (shorthand: string) => {
+  if (shorthand === "Release") return 0;
+
+  const [year, season] = /Y(\d+)S(\d)/.exec(shorthand)?.slice(1).map(Number) as [number, number]
+  return year === 0 ? 0 : year * 4 - 4 + season
+}
+
+const sorters = {
+  'A-Z': (operators: Operator[]) => operators
+    .toSorted((a, b) => a.name.localeCompare(b.name)),
+  'Z-A': (operators: Operator[]) => operators
+    .toSorted((a, b) => b.name.localeCompare(a.name)),
+  'Newest': (operators: Operator[]) => operators
+    .toSorted((a, b) => a.role.localeCompare(b.role)) // Role
+    .toSorted((a, b) => a.org.localeCompare(b.org)) // Org
+    .toSorted((a, b) => {
+      return (b.meta ? getSeasonId(b.meta.season) : -1) - (a.meta ? getSeasonId(a.meta.season) : -1);
+    }), // Season
+  'Oldest': (operators: Operator[]) => operators
+    .toSorted((a, b) => a.role.localeCompare(b.role)) // Role
+    .toSorted((a, b) => a.org.localeCompare(b.org)) // Org
+    .toSorted((a, b) => {
+      return (a.meta ? getSeasonId(a.meta.season) : -1) - (b.meta ? getSeasonId(b.meta.season) : -1);
+    }) // Season
+};
+
+const sortOperators = (operators: Operator[], sorter: string) => {
+  return sorter in sorters ? sorters[sorter as keyof typeof sorters](operators) : operators;
+};
 
 // create GLYPHS object for svg sprite loader
 const requestIcons = require.context("r6operators/dist/icons", true, /\.svg$/);
@@ -67,10 +99,12 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
       inputValue: "",
       items: initialItems,
       filter: "",
+      sorter: "",
     };
     // bind functions
     this.updateInputValue = this.updateInputValue.bind(this);
     this.setFilter = this.setFilter.bind(this);
+    this.setSort = this.setSort.bind(this);
   }
 
   updateInputValue(event: React.ChangeEvent<HTMLInputElement>): void {
@@ -88,9 +122,30 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
       const updatedList = initialItems.filter(
         (x) =>
           x.role.toString().toLowerCase() === option.value.toString().toLowerCase() ||
-          x.unit.toString().toLowerCase() === option.value.toString().toLowerCase()
+          x.org.toString().toLowerCase() === option.value.toString().toLowerCase()
       );
       this.setState({ inputValue: "", filter: option.value, items: updatedList });
+    }
+  }
+  setSort(option: DropdownOption) {
+    switch (option.value) {
+      case "Default":
+        this.setState({ sorter: "" });
+        break;
+      case "A-Z":
+        this.setState({ sorter: option.value });
+        break;
+      case "Z-A":
+        this.setState({ sorter: option.value });
+        break;
+      case "Newest":
+        this.setState({ sorter: option.value });
+        break;  
+      case "Oldest":
+        this.setState({ sorter: option.value });
+        break;
+      default:
+        break;
     }
   }
   render(): JSX.Element {
@@ -112,14 +167,21 @@ export default class IconGrid extends React.Component<IIconGridProps, IIconGridS
             value={this.state.filter}
             placeholder="Select an option"
           />
+          <Dropdown
+            className="icongrid__dropdown"
+            options={sortDropDownFilters}
+            onChange={this.setSort}
+            value={this.state.sorter}
+            placeholder="Sort"
+          />
         </div>
         <div
           className={
             this.state.items.length === 0 ? "icongrid__container is-empty" : "icongrid__container"
           }
         >
-          {this.state.items.map((x) => (
-            <IconTile key={x.id} object={x} icon={x.id} />
+          {sortOperators(this.state.items, this.state.sorter).map((x) => (
+            <IconTile key={x.id} object={x} />
           ))}
           {this.state.items.length === 0 ? (
             <div className="icongrid__empty">
