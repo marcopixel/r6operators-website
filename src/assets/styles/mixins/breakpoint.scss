@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../variables" as *;
+
+@mixin breakpoint($breakpoint, $direction: $media-direction) {
+  @if map.has-key($grid-breakpoints, $breakpoint) {
+    @media screen and (#{$direction}-width: #{map.get($grid-breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else if unitless($breakpoint) {
+    $breakpoint: $breakpoint + 0;
+
+    @media screen and (#{$direction}-width: $breakpoint) {
+      @content;
+    }
+  }
+}

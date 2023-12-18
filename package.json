@@ -1,0 +1,69 @@
+{
+  "name": "r6operators-website",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Marco Vockner <me@marcovockner.dev>",
+  "contributors": [
+    "Daniel Werg (https://github.com/danielwerg)"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:assets && npm run build:vite",
+    "build:assets": "vite-node ./scripts/buildStaticAssets.ts",
+    "build:vite": "vite-ssg build",
+    "clean": "vite-node ./scripts/clean.ts",
+    "dev": "vite",
+    "format": "prettier **/* --ignore-path .gitignore --check --write",
+    "lint": "eslint **/*.{js,ts,vue} --ignore-path .gitignore",
+    "prepare": "husky install",
+    "stylelint": "stylelint **/*.{vue,css,scss}"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --cache --fix",
+    "*.{css,scss}": "stylelint --fix"
+  },
+  "dependencies": {
+    "@vueform/multiselect": "^2.6.2",
+    "normalize.css": "^8.0.1",
+    "r6operators": "^2.6.1",
+    "radix-vue": "^1.2.3",
+    "slugify": "^1.6.6",
+    "vue": "^3.3.4",
+    "vue-collapsed": "^1.2.9"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@unhead/vue": "^1.8.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "archiver": "^6.0.1",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier-vue": "^5.0.0",
+    "eslint-plugin-unicorn": "^49.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.66.1",
+    "sharp": "^0.33.0",
+    "stylelint": "^16.0.2",
+    "stylelint-config-recommended-vue": "^1.1.0",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-node": "^1.0.1",
+    "vite-ssg": "^0.23.5",
+    "vite-svg-loader": "^5.1.0",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vue-eslint-parser": "^9.3.2",
+    "vue-tsc": "^1.8.5"
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  }
+}

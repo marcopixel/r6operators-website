@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
+  "rules": {
+    "color-hex-length": "long",
+    "color-function-notation": [
+      "modern",
+      {
+        "ignore": ["with-var-inside"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+@use "colors";
+@use "mixins";
+
+.slide-fade-left-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-left-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-left-enter-from,
+.slide-fade-left-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes popover-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popover-slideup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-animation-button {
+  0% {
+    border-color: colors.$gradient-step-2;
+    background: colors.$gradient-step-2;
+  }
+
+  20% {
+    border-color: colors.$gradient-step-3;
+    background: colors.$gradient-step-3;
+  }
+
+  35% {
+    border-color: colors.$gradient-step-4;
+    background: colors.$gradient-step-4;
+  }
+
+  50% {
+    border-color: colors.$gradient-step-3;
+    background: colors.$gradient-step-3;
+  }
+
+  65% {
+    border-color: colors.$gradient-step-2;
+    background: colors.$gradient-step-2;
+  }
+
+  80% {
+    border-color: colors.$gradient-step-1;
+    background: colors.$gradient-step-1;
+  }
+
+  100% {
+    border-color: colors.$gradient-step-2;
+    background: colors.$gradient-step-2;
+  }
+}
+
+@keyframes gradient-animation-install {
+  0% {
+    border-color: colors.$gradient-step-2;
+  }
+
+  20% {
+    border-color: colors.$gradient-step-3;
+  }
+
+  35% {
+    border-color: colors.$gradient-step-4;
+  }
+
+  50% {
+    border-color: colors.$gradient-step-3;
+  }
+
+  65% {
+    border-color: colors.$gradient-step-2;
+  }
+
+  80% {
+    border-color: colors.$gradient-step-1;
+  }
+
+  100% {
+    border-color: colors.$gradient-step-2;
+  }
+}
+
+@keyframes gradient-animation-install-bg {
+  0% {
+    background: colors.$gradient-step-2;
+  }
+
+  20% {
+    background: colors.$gradient-step-3;
+  }
+
+  35% {
+    background: colors.$gradient-step-4;
+  }
+
+  50% {
+    background: colors.$gradient-step-3;
+  }
+
+  65% {
+    background: colors.$gradient-step-2;
+  }
+
+  80% {
+    background: colors.$gradient-step-1;
+  }
+
+  100% {
+    background: colors.$gradient-step-2;
+  }
+}
