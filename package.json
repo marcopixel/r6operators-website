@@ -16,7 +16,7 @@
     "dev": "vite",
     "format": "prettier **/* --ignore-path .gitignore --check --write",
     "lint": "eslint **/*.{js,ts,vue} --ignore-path .gitignore",
-    "prepare": "husky install",
+    "prepare": "husky",
     "stylelint": "stylelint **/*.{vue,css,scss}"
   },
   "lint-staged": {
@@ -34,26 +34,26 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.0",
-    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "@unhead/vue": "^1.8.9",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "archiver": "^6.0.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "archiver": "^7.0.0",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-prettier-vue": "^5.0.0",
-    "eslint-plugin-unicorn": "^49.0.0",
+    "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-vue": "^9.17.0",
     "fs-extra": "^11.1.1",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.0",
     "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "sharp": "^0.33.0",
     "stylelint": "^16.0.2",
     "stylelint-config-recommended-vue": "^1.1.0",
-    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-node": "^1.0.1",
@@ -61,7 +61,7 @@
     "vite-svg-loader": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.0",
     "vue-eslint-parser": "^9.3.2",
-    "vue-tsc": "^1.8.5"
+    "vue-tsc": "^2.0.3"
   },
   "engines": {
     "node": ">=18.12.0"
