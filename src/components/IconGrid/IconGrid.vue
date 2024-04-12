@@ -117,25 +117,28 @@ const getSeasonId = (shorthand: string) => {
 }
 
 const sortOperators = (operators: Operator[], sorter: sortValue) => {
+  let operatorsCopy = [...operators]
   switch (sorter) {
     case "a-z":
-      return operators.sort((a, b) => a.id.localeCompare(b.id))
+      return operatorsCopy.sort((a, b) => a.id.localeCompare(b.id))
     case "z-a":
-      return operators.sort((a, b) => b.id.localeCompare(a.id))
+      return operatorsCopy.sort((a, b) => b.id.localeCompare(a.id))
     case "newest":
-      return operators
+      return operatorsCopy
         .sort((a, b) => a.role.localeCompare(b.role)) // Role
         .sort((a, b) => a.org.localeCompare(b.org)) // Org
         .sort((a, b) => {
           return (b.meta ? getSeasonId(b.meta.season) : -1) - (a.meta ? getSeasonId(a.meta.season) : -1)
         }) // Season
     case "oldest":
-      return operators
+      return operatorsCopy
         .sort((a, b) => a.role.localeCompare(b.role)) // Role
         .sort((a, b) => a.org.localeCompare(b.org)) // Org
         .sort((a, b) => {
           return (a.meta ? getSeasonId(a.meta.season) : -1) - (b.meta ? getSeasonId(b.meta.season) : -1)
         })
+    default:
+      return operatorsCopy
   }
 }
 
