@@ -145,3 +145,36 @@
     background: colors.$gradient-step-2;
   }
 }
+
+@keyframes gradient-animation-install-shadow {
+  $blur-radius: 30px;
+  $spread-radius: 2px;
+
+  0% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-2;
+  }
+
+  20% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-3;
+  }
+
+  35% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-4;
+  }
+
+  50% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-3;
+  }
+
+  65% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-2;
+  }
+
+  80% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-1;
+  }
+
+  100% {
+    box-shadow: 0 0 $blur-radius $spread-radius colors.$gradient-step-2;
+  }
+}

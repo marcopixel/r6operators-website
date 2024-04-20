@@ -282,11 +282,14 @@ const filteredItems = computed(() => {
     transition: all 0.3s ease;
 
     &:hover {
+      border: 1px solid rgba(colors.$white, 0.2);
       background-color: color.mix(colors.$white, colors.$body-bg, 10%);
+      box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
     }
 
     &:focus-within {
-      border: 1px solid rgba(colors.$white, 0.3);
+      border: 1px solid rgba(colors.$white, 0.4);
+      box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
     }
 
     .icongrid-search-icon {
@@ -378,11 +381,14 @@ const filteredItems = computed(() => {
       }
 
       &:hover {
-        background-color: color.mix(colors.$white, colors.$body-bg, 15%);
+        border: 1px solid rgba(colors.$white, 0.2);
+        background-color: color.mix(colors.$white, colors.$body-bg, 10%);
+        box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
       }
 
       &:focus-within {
-        border: 1px solid rgba(colors.$white, 0.1);
+        border: 1px solid rgba(colors.$white, 0.4);
+        box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
       }
 
       .multiselect-multiple-label,
@@ -446,10 +452,19 @@ const filteredItems = computed(() => {
         transition: all 0.3s ease;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
+        border: 1px solid rgba(colors.$white, 0.2);
         background-color: color.mix(colors.$white, colors.$body-bg, 10%);
+        box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
+      }
 
+      &.focus {
+        border: 1px solid rgba(colors.$white, 0.4);
+        box-shadow: 0 0 20px 2px rgba(colors.$white, 0.05);
+      }
+
+      &:hover,
+      &.focus {
         /* stylelint-disable-next-line no-descending-specificity */
         svg {
           transform: scale(1.1);
@@ -463,6 +478,7 @@ const filteredItems = computed(() => {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1.5rem;
+    transition: all 0.3s ease;
 
     @include mixins.breakpoint("sm") {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -492,6 +508,21 @@ const filteredItems = computed(() => {
       border: 1px solid color.adjust(colors.$body-bg, $lightness: 7%);
       transition: all 0.3s ease;
       grid-column: 1 / -1;
+    }
+
+    .icongrid-tile {
+      &:hover,
+      &:focus {
+        opacity: 1 !important;
+        box-shadow: 0 0 20px 2px rgba(colors.$white, 0.1);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icongrid-tile {
+        opacity: 0.6;
+      }
     }
   }
 

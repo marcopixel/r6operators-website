@@ -138,10 +138,31 @@ import LogoSVG from "@assets/logo.svg?component"
           opacity: 0.2;
         }
 
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: $border-radius;
+          background-color: transparent;
+          box-shadow: 0 0 40px 4px rgba(colors.$gradient-step-2, 0.6);
+          animation: gradient-animation-install-shadow 15s ease infinite;
+          transition: opacity 0.3s ease;
+          z-index: -2;
+          opacity: 0.3;
+        }
+
         &:hover,
         &:focus {
           &::before {
             opacity: 0.4;
+          }
+
+          &::after {
+            opacity: 0.8;
           }
         }
       }
@@ -164,6 +185,7 @@ import LogoSVG from "@assets/logo.svg?component"
       justify-content: center;
 
       a {
+        position: relative;
         display: flex;
         align-items: center;
         padding: 0.5rem 1.75rem;
@@ -175,9 +197,30 @@ import LogoSVG from "@assets/logo.svg?component"
         white-space: nowrap;
         animation: gradient-animation-button 15s ease infinite;
 
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: $border-radius;
+          background-color: transparent;
+          box-shadow: 0 0 40px 4px rgba(colors.$gradient-step-2, 0.6);
+          animation: gradient-animation-install-shadow 15s ease infinite;
+          transition: opacity 0.3s ease;
+          z-index: -2;
+          opacity: 0.3;
+        }
+
         &:hover,
         &:focus {
           transform: scale(1.1);
+
+          &::after {
+            opacity: 0.8;
+          }
         }
       }
 
