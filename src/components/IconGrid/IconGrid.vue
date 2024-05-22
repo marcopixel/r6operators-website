@@ -176,7 +176,7 @@ const filteredItems = computed(() => {
         <div class="icongrid-search-icon">
           <SearchIcon />
         </div>
-        <input v-model="filterText" class="icongrid-search-input" :placeholder="`Search ${filteredItems.length} operators`" />
+        <input v-model="filterText" class="icongrid-search-input" :placeholder="`Search ${filteredItems.length} operator icons`" />
         <Transition name="slide-fade-left">
           <button v-if="filterText" class="icongrid-search-clear" @click="clearFilters('text')">
             <CloseIcon />
