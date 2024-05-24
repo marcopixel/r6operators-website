@@ -53,14 +53,6 @@ const selectOptions = [
 
 const sortOptions = [
   {
-    label: "A-Z",
-    value: "a-z",
-  },
-  {
-    label: "Z-A",
-    value: "z-a",
-  },
-  {
     label: "Newest",
     value: "newest",
   },
@@ -68,8 +60,16 @@ const sortOptions = [
     label: "Oldest",
     value: "oldest",
   },
+  {
+    label: "A-Z",
+    value: "a-z",
+  },
+  {
+    label: "Z-A",
+    value: "z-a",
+  },
 ] as sortItem[]
-const defaultSorter = "a-z"
+const defaultSorter = "newest"
 
 // create refs for inputs
 const filterText = ref("")
