@@ -479,6 +479,7 @@ const filteredItems = computed(() => {
     gap: 1rem;
     margin-top: 1.5rem;
     transition: all 0.3s ease;
+    pointer-events: none;
 
     @include mixins.breakpoint("sm") {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -511,18 +512,22 @@ const filteredItems = computed(() => {
     }
 
     .icongrid-tile {
+      pointer-events: auto;
+
       &:hover,
       &:focus {
-        opacity: 1 !important;
         box-shadow: 0 0 20px 2px rgba(colors.$white, 0.1);
       }
     }
 
-    &:hover,
-    &:focus {
-      .icongrid-tile {
-        opacity: 0.6;
-      }
+    &:hover .icongrid-tile,
+    &:focus-within .icongrid-tile {
+      opacity: 0.6;
+    }
+
+    &:hover .icongrid-tile:hover,
+    &:focus-within .icongrid-tile:focus {
+      opacity: 1;
     }
   }
 
