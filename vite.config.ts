@@ -18,7 +18,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        includePaths: ["./src/assets"],
+        api: "modern-compiler",
+        loadPaths: ["./src/assets/"],
       },
     },
   },
