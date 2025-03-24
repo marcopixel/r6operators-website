@@ -1,4 +1,5 @@
 {
+  "\u0000/home/runner/work/r6operators-website/r6operators-website/node_modules/slugify/slugify.js?commonjs-es-import": [],
   "\u0000/home/runner/work/r6operators-website/r6operators-website/node_modules/slugify/slugify.js?commonjs-module": [],
   "\u0000commonjsHelpers.js": [],
   "\u0000plugin-vue:export-helper": [],
@@ -11,7 +12,6 @@
   "node_modules/@floating-ui/vue/dist/floating-ui.vue.mjs": [],
   "node_modules/@unhead/dom/dist/index.mjs": [],
   "node_modules/@unhead/shared/dist/index.mjs": [],
-  "node_modules/@unhead/vue/dist/shared/vue.f49591ad.mjs": [],
   "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
   "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
   "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
@@ -22,10 +22,11 @@
   "node_modules/r6operators/package.json": [],
   "node_modules/radix-vue/dist/index.js": [],
   "node_modules/slugify/slugify.js": [],
-  "node_modules/unhead/dist/index.mjs": [],
   "node_modules/vite-ssg/dist/client/single-page.mjs": [],
-  "node_modules/vite-ssg/dist/shared/vite-ssg.5912142e.mjs": [],
-  "node_modules/vite-ssg/dist/shared/vite-ssg.a009fbf1.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "node_modules/vite-ssg/node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [],
+  "node_modules/vite-ssg/node_modules/unhead/dist/index.mjs": [],
   "node_modules/vue-collapsed/dist/index.mjs": [],
   "src/App.vue?vue&type=script&setup=true&lang.ts": [],
   "src/App.vue?vue&type=style&index=0&lang.scss": [],
@@ -45,6 +46,5 @@
   "src/components/MainHeader.vue?vue&type=style&index=0&lang.scss": [],
   "src/components/common/ChipTag.vue": [],
   "src/components/common/ChipTag.vue?vue&type=script&setup=true&lang.ts": [],
-  "src/components/common/ChipTag.vue?vue&type=style&index=0&scoped=008a3ce2&lang.scss": [],
   "src/main.ts": []
 }
