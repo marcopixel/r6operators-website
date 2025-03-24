@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import archiver from "archiver"
 import fs from "fs-extra"
 import pkg from "r6operators/package.json"
@@ -29,11 +29,8 @@ export default async function generatePackage(): Promise<void> {
 
   // catch errors
   output.on("error", (error) => {
-    if (error.code === "ENOENT") {
-      throw error
-    } else {
-      throw error
-    }
+    const error_ = error.code === "ENOENT" ? error : error;
+    throw error_;
   })
 
   // resolve on finish

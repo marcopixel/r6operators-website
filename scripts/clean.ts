@@ -1,4 +1,4 @@
-import { promises as fs } from "fs"
+import { promises as fs } from "node:fs"
 import { ICONS_DIR, PUBLIC_DIR, DIST_DIR } from "./config"
 
 async function main(): Promise<void> {
@@ -11,7 +11,9 @@ async function main(): Promise<void> {
   console.log("Cleanup finished!")
 }
 
-main().catch((error) => {
+try {
+  await main()
+} catch (error) {
   console.log(error)
   process.exit(1)
-})
+}

@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import archiver from "archiver"
 import fs from "fs-extra"
 
@@ -31,12 +31,9 @@ export default async function generatePng(iconObject: Record<string, unknown>): 
     })
 
     // catch errors
-    output.on("error", (error) => {
-      if (error.code === "ENOENT") {
-        throw error
-      } else {
-        throw error
-      }
+    output.on("error", (error: NodeJS.ErrnoException) => {
+      const error_ = error.code === "ENOENT" ? error : error;
+      throw error_;
     })
 
     // resolve on finish

@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import fs from "fs-extra"
 import sharp from "sharp"
 import { ICONS_DIR, PNG_CONFIG } from "../config"
@@ -39,10 +39,10 @@ export default async function generatePng(iconObject: Record<string, unknown>): 
       .metadata()
       // check if file is svg
       .then((metadata) => {
-        if (metadata.format !== "svg") {
-          throw new Error(`The source file is not an SVG file! - ${path.normalize(inputFile)}`)
-        } else {
+        if (metadata.format === "svg") {
           return
+        } else {
+          throw new Error(`The source file is not an SVG file! - ${path.normalize(inputFile)}`)
         }
       })
       // execute image manipulations (resize image and save it as png)

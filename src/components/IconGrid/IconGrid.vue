@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue"
-import { Operator, default as ops } from "r6operators"
+import ops, { Operator } from "r6operators"
 import { Collapse } from "vue-collapsed"
 import { PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from "radix-vue"
 import slugify from "slugify"
@@ -93,16 +93,19 @@ watch(filterSelect, (val) => {
 // clear filter functions
 function clearFilters(type: "all" | "text" | "tags") {
   switch (type) {
-    case "all":
+    case "all": {
       filterText.value = ""
       filterSelect.value = []
       break
-    case "text":
+    }
+    case "text": {
       filterText.value = ""
       break
-    case "tags":
+    }
+    case "tags": {
       filterSelect.value = []
       break
+    }
   }
 }
 const clearFilterItem = (tag: filterItem) => {
@@ -117,28 +120,33 @@ const getSeasonId = (shorthand: string) => {
 }
 
 const sortOperators = (operators: Operator[], sorter: sortValue) => {
-  let operatorsCopy = [...operators]
+  const operatorsCopy = [...operators]
   switch (sorter) {
-    case "a-z":
+    case "a-z": {
       return operatorsCopy.sort((a, b) => a.id.localeCompare(b.id))
-    case "z-a":
+    }
+    case "z-a": {
       return operatorsCopy.sort((a, b) => b.id.localeCompare(a.id))
-    case "newest":
+    }
+    case "newest": {
       return operatorsCopy
         .sort((a, b) => a.role.localeCompare(b.role)) // Role
         .sort((a, b) => a.org.localeCompare(b.org)) // Org
         .sort((a, b) => {
           return (b.meta ? getSeasonId(b.meta.season) : -1) - (a.meta ? getSeasonId(a.meta.season) : -1)
-        }) // Season
-    case "oldest":
+        })
+    } // Season
+    case "oldest": {
       return operatorsCopy
         .sort((a, b) => a.role.localeCompare(b.role)) // Role
         .sort((a, b) => a.org.localeCompare(b.org)) // Org
         .sort((a, b) => {
           return (a.meta ? getSeasonId(a.meta.season) : -1) - (b.meta ? getSeasonId(b.meta.season) : -1)
         })
-    default:
+    }
+    default: {
       return operatorsCopy
+    }
   }
 }
 
@@ -150,7 +158,7 @@ const sortedOperators = computed(() => {
 // create filtered list
 const filteredItems = computed(() => {
   // set filter object
-  let filters = {
+  const filters = {
     name: filterText.value,
     role: filterSelect.value.filter((op) => op.type === "Role").map((x) => x.value),
     org: filterSelect.value.filter((op) => op.type === "Organisation").map((x) => x.value),

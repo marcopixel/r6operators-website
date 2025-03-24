@@ -1,6 +1,6 @@
 import fs from "fs-extra"
-import path from "path"
-import { default as ops } from "r6operators"
+import path from "node:path"
+import ops from "r6operators"
 import { PUBLIC_DIR, INPUT_DIR } from "./config"
 
 import generatePng from "./modules/generatePng"
@@ -25,7 +25,9 @@ async function main(): Promise<void> {
   await generatePackage()
 }
 
-main().catch((error) => {
+try {
+  await main()
+} catch (error) {
   console.log(error)
   process.exit(1)
-})
+}
