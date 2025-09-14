@@ -1,4 +1,5 @@
 {
+  "ignoreFiles": ["**/node_modules/**", "dist/**", "public/**"],
   "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
   "rules": {
     "color-hex-length": "long",

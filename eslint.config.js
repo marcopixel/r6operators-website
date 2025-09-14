@@ -12,7 +12,7 @@ const sharedRules = {
       cases: {
         pascalCase: true,
         camelCase: true,
-        kebabCase: false
+        kebabCase: false,
       },
       ignore: [
         "globals.d.ts",
@@ -23,59 +23,46 @@ const sharedRules = {
         String.raw`\.types.ts(x)?`,
         String.raw`\.stories.ts(x)?`,
         String.raw`\.styled.ts(x)?`,
-        String.raw`\.styles.ts(x)?`
-      ]
-    }
+        String.raw`\.styles.ts(x)?`,
+      ],
+    },
   ],
   "unicorn/no-abusive-eslint-disable": "off",
   "unicorn/no-useless-undefined": "off",
   "unicorn/numeric-separators-style": "off",
   "unicorn/prefer-global-this": "off",
-  "unicorn/prevent-abbreviations": "off"
+  "unicorn/prevent-abbreviations": "off",
 }
 
 export default tseslint.config(
   {
-    ignores: ["*.d.ts", "**/coverage", "**/dist", "**/node_modules", "**/public"]
+    ignores: ["*.d.ts", "**/coverage", "**/dist", "**/node_modules", "**/public"],
   },
   {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.cjs", "**/*.mjs"],
-    extends: [
-      tseslint.configs["recommended"],
-      pluginUnicorn.configs["recommended"],
-      configPrettier
-    ],
+    extends: [tseslint.configs["recommended"], pluginUnicorn.configs["recommended"], configPrettier],
     rules: {
-      ...sharedRules
-    }
+      ...sharedRules,
+    },
   },
   {
     files: ["scripts/**/*.ts"],
-    extends: [
-      tseslint.configs["recommended"],
-      pluginUnicorn.configs["recommended"],
-      configPrettier
-    ],
+    extends: [tseslint.configs["recommended"], pluginUnicorn.configs["recommended"], configPrettier],
     rules: {
       ...sharedRules,
-      "unicorn/no-process-exit": "off"
-    }
+      "unicorn/no-process-exit": "off",
+    },
   },
   {
     files: ["**/*.vue"],
-    extends: [
-      tseslint.configs["recommended"],
-      pluginVue.configs["flat/recommended"],
-      pluginUnicorn.configs["recommended"],
-      configPrettier
-    ],
+    extends: [tseslint.configs["recommended"], pluginVue.configs["flat/recommended"], pluginUnicorn.configs["recommended"], configPrettier],
     languageOptions: {
       parserOptions: {
-        parser: "@typescript-eslint/parser"
-      }
+        parser: "@typescript-eslint/parser",
+      },
     },
     rules: {
-      ...sharedRules
-    }
-  }
+      ...sharedRules,
+    },
+  },
 )

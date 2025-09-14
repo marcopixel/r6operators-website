@@ -33,19 +33,19 @@ const squads = [...new Set(operators.map((x) => x.squad))]
 const selectOptions = [
   {
     label: "Role",
-    options: roles.sort().map((x) => {
+    options: roles.toSorted().map((x) => {
       return { value: x, type: "Role", label: x }
     }),
   },
   {
     label: "Organisation",
-    options: orgs.sort().map((x) => {
+    options: orgs.toSorted().map((x) => {
       return { value: x, type: "Organisation", label: x }
     }),
   },
   {
     label: "Squad",
-    options: squads.sort().map((x) => {
+    options: squads.toSorted().map((x) => {
       return { value: x, type: "Squad", label: x }
     }),
   },
@@ -79,7 +79,7 @@ const multiselect = ref()
 
 // sort filter select options by type (first by role, then by org, then by squad)
 watch(filterSelect, (val) => {
-  filterSelect.value = val.sort((a, b) => {
+  const sorted = val.toSorted((a, b) => {
     if (a.type === b.type) return 0
     if (a.type === "Role") return -1
     if (a.type === "Organisation" && b.type === "Squad") return -1
@@ -88,6 +88,9 @@ watch(filterSelect, (val) => {
     if (a.type === "Squad" && b.type === "Role") return 1
     return 0 // Default case when none of the conditions match
   })
+  if (JSON.stringify(sorted) !== JSON.stringify(val)) {
+    filterSelect.value = sorted
+  }
 })
 
 // clear filter functions
@@ -123,24 +126,24 @@ const sortOperators = (operators: Operator[], sorter: sortValue) => {
   const operatorsCopy = [...operators]
   switch (sorter) {
     case "a-z": {
-      return operatorsCopy.sort((a, b) => a.id.localeCompare(b.id))
+      return operatorsCopy.toSorted((a, b) => a.id.localeCompare(b.id))
     }
     case "z-a": {
-      return operatorsCopy.sort((a, b) => b.id.localeCompare(a.id))
+      return operatorsCopy.toSorted((a, b) => b.id.localeCompare(a.id))
     }
     case "newest": {
       return operatorsCopy
-        .sort((a, b) => a.role.localeCompare(b.role)) // Role
-        .sort((a, b) => a.org.localeCompare(b.org)) // Org
-        .sort((a, b) => {
+        .toSorted((a, b) => a.role.localeCompare(b.role)) // Role
+        .toSorted((a, b) => a.org.localeCompare(b.org)) // Org
+        .toSorted((a, b) => {
           return (b.meta ? getSeasonId(b.meta.season) : -1) - (a.meta ? getSeasonId(a.meta.season) : -1)
         })
     } // Season
     case "oldest": {
       return operatorsCopy
-        .sort((a, b) => a.role.localeCompare(b.role)) // Role
-        .sort((a, b) => a.org.localeCompare(b.org)) // Org
-        .sort((a, b) => {
+        .toSorted((a, b) => a.role.localeCompare(b.role)) // Role
+        .toSorted((a, b) => a.org.localeCompare(b.org)) // Org
+        .toSorted((a, b) => {
           return (a.meta ? getSeasonId(a.meta.season) : -1) - (b.meta ? getSeasonId(b.meta.season) : -1)
         })
     }

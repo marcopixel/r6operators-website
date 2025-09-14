@@ -6,7 +6,7 @@
     @media screen and (#{$direction}-width: #{map.get($grid-breakpoints, $breakpoint)}) {
       @content;
     }
-  } @else if unitless($breakpoint) {
+  } @else if math.is-unitless($breakpoint) {
     $breakpoint: $breakpoint + 0;
 
     @media screen and (#{$direction}-width: $breakpoint) {

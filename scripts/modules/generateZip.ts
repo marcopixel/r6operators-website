@@ -32,8 +32,8 @@ export default async function generatePng(iconObject: Record<string, unknown>): 
 
     // catch errors
     output.on("error", (error: NodeJS.ErrnoException) => {
-      const error_ = error.code === "ENOENT" ? error : error;
-      throw error_;
+      const error_ = error.code === "ENOENT" ? error : error
+      throw error_
     })
 
     // resolve on finish

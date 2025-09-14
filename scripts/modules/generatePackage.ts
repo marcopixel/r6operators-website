@@ -29,8 +29,8 @@ export default async function generatePackage(): Promise<void> {
 
   // catch errors
   output.on("error", (error) => {
-    const error_ = error.code === "ENOENT" ? error : error;
-    throw error_;
+    const error_ = error.code === "ENOENT" ? error : error
+    throw error_
   })
 
   // resolve on finish
